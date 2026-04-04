@@ -11,3 +11,4 @@ build/
 .vercel/
 .turbo/
 .cache/
+node_modules

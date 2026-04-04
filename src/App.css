@@ -1,22 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  --color-primary: #c4c7c9;
+  --color-on-primary: #3d4142;
+  --color-primary-container: #444749;
+  --color-on-primary-container: #ced1d2;
+  --color-secondary: #939eb5;
+  --color-on-secondary: #152032;
+  --color-surface: #070d1f;
+  --color-on-surface: #dfe4ff;
+  --color-on-surface-variant: #96a9e6;
+  --color-surface-container: #0a1839;
+  --color-surface-container-high: #0b1d48;
+  --color-error: #ee7d77;
+  --color-background: #070d1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-surface);
+  min-height: 100vh;
+}
+
 .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(7, 13, 31, 0.6);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, rgba(8, 39, 104, 0.15) 0%, rgba(7, 13, 31, 1) 70%);
+}
+
+.digital-clock {
   text-align: center;
-  padding: 3rem;
 }
 
 .time {
   font-size: 6rem;
   font-weight: 700;
-  color: #fff;
-  text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
-  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  text-shadow: 0 0 40px rgba(196, 199, 201, 0.15);
+  letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .date {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.25rem;
+  color: var(--color-secondary);
   margin-top: 1rem;
   text-transform: capitalize;
+  font-weight: 500;
+}
+
+.analog-clock-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -26,5 +98,9 @@
   
   .date {
     font-size: 1rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
   }
 }
