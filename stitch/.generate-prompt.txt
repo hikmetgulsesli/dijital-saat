@@ -1,0 +1,57 @@
+# dijital-saat — Urun Gereksinim Dokumant
+
+## 1. Genel Bakis
+- **Proje Adi:** dijital-saat
+- **Platform:** Web (SPA)
+- **Tipoloji:** Minimal utility uygulamasi
+- **Ozet:** Tek sayfalik dijital saat uygulamasi. Buyuk fontla saat:dakika:saniye gosterimi. Tarih gosterimi. Koyu tema. Minimal tasarim.
+- **Hedef Kullanici:** Herkes
+
+## 2. Hedef Platform
+- **Platform:** Web (mobil uyumlu responsive tasarim)
+- **Tarayici Destegi:** Chrome, Firefox, Safari, Edge
+
+## 3. Fonksiyonel Gereksinimler
+| # | Ozellik | Aciklama |
+|---|---------|----------|
+| 1 | Dijital Saat | Saat:dakika:saniye buyuk fontla ekranda |
+| 2 | Tarih Gosterimi | Gun/Ay/Yil formatinda tarih |
+| 3 | Analog Saat Gorunumu | Opsiyonel analog saat gorunumu |
+| 4 | Ayarlar | Analog/dijital gecis |
+| 5 | Koyu Tema | Koyu tema varsayilan |
+
+## 4. Teknik Gereksinimler
+| Katman | Teknoloji |
+|--------|-----------|
+| Framework | React 18 + Vite |
+| Styling | Tailwind CSS |
+| State | React useState + useEffect |
+| Build | Vite |
+| Tip Kontrolu | TypeScript |
+
+## 5. UI/UX Gereksinimleri
+- **Tema:** Koyu tema (dark mode)
+- **Tasarim:** Minimal, sade
+- **Renk Paleti:**
+  - Arka plan: slate-950
+  - Metin: beyaz
+- **Tipografi:** Space Grotesk (baslik), Inter (govde)
+- **Layout:** Sayfa ortasinda hizali (flex center)
+
+## 6. Ekranlar (Screens)
+| # | Ekran Adi | Tur | Aciklama |
+|---|-----------|-----|----------|
+| 1 | Ana Saat Gorunumu | utility-view | Dijital saat, tarih, analog opsiyon |
+| 2 | Ayarlar | utility-view | Tema, analog/dijital gecis |
+| 3 | Hata Durumu | error-state | Saat alinamadiiginda gosterilir |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

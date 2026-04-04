@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#c7d5ee",
+                    "on-secondary-fixed-variant": "#515c70",
+                    "on-secondary-fixed": "#354053",
+                    "on-error": "#490106",
+                    "on-error-container": "#ff9993",
+                    "surface-container-low": "#09122b",
+                    "inverse-primary": "#5c5f61",
+                    "secondary": "#939eb5",
+                    "on-surface-variant": "#96a9e6",
+                    "primary-dim": "#b6b9bb",
+                    "surface-container": "#0a1839",
+                    "secondary-fixed-dim": "#cad5ed",
+                    "primary-fixed": "#e0e3e5",
+                    "surface-variant": "#0a2257",
+                    "inverse-surface": "#faf8ff",
+                    "on-primary-fixed": "#3c4042",
+                    "error": "#ee7d77",
+                    "error-container": "#7f2927",
+                    "on-surface": "#dfe4ff",
+                    "on-tertiary": "#4d5b70",
+                    "outline-variant": "#32457c",
+                    "on-primary-container": "#ced1d2",
+                    "surface-tint": "#c4c7c9",
+                    "primary": "#c4c7c9",
+                    "tertiary-fixed-dim": "#c7d5ee",
+                    "on-background": "#dfe4ff",
+                    "surface": "#070d1f",
+                    "on-primary-fixed-variant": "#595c5e",
+                    "secondary-dim": "#939eb5",
+                    "on-secondary-container": "#b4c0d7",
+                    "primary-fixed-dim": "#d2d5d7",
+                    "primary-container": "#444749",
+                    "outline": "#6073ad",
+                    "error-dim": "#bb5551",
+                    "surface-container-high": "#0b1d48",
+                    "surface-container-lowest": "#000000",
+                    "background": "#070d1f",
+                    "on-tertiary-fixed": "#324054",
+                    "secondary-container": "#313c4f",
+                    "surface-container-highest": "#0a2257",
+                    "tertiary-container": "#d5e3fd",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-secondary": "#152032",
+                    "on-primary": "#3d4142",
+                    "inverse-on-surface": "#4f5469",
+                    "tertiary-fixed": "#d5e3fd",
+                    "tertiary": "#ebf1ff",
+                    "surface-bright": "#082768",
+                    "on-tertiary-container": "#455367",
+                    "surface-dim": "#070d1f",
+                    "on-tertiary-fixed-variant": "#4e5c71"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .monolith-vortex {
+            background: radial-gradient(circle at center, rgba(8, 39, 104, 0.15) 0%, rgba(7, 13, 31, 1) 100%);
+        }
+        .ambient-glow {
+            box-shadow: 0 0 40px 0px rgba(196, 199, 201, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen monolith-vortex flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#070d1f]/60 backdrop-blur-2xl text-[#c4c7c9] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="font-['Space_Grotesk'] font-bold tracking-tighter text-2xl text-[#c4c7c9]">Saat</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-6 pt-20 pb-32">
+<div class="max-w-lg w-full flex flex-col items-center text-center space-y-12">
+<!-- Error Visualization -->
+<div class="relative group">
+<div class="absolute inset-0 bg-error/10 blur-3xl rounded-full scale-150 opacity-50"></div>
+<div class="relative w-32 h-32 md:w-48 md:h-48 rounded-full bg-surface-container-high border border-outline-variant/15 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-error-dim text-6xl md:text-8xl scale-110" data-icon="cloud_off">cloud_off</span>
+</div>
+</div>
+<!-- Error Messaging -->
+<div class="space-y-4">
+<h1 class="font-headline font-bold text-3xl md:text-5xl tracking-tight text-primary">Bir hata oluştu</h1>
+<p class="font-body text-secondary max-w-sm mx-auto leading-relaxed text-lg">
+                    Saat sunucusuna bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.
+                </p>
+</div>
+<!-- Action Area -->
+<div class="w-full flex flex-col items-center">
+<button class="bg-primary text-on-primary font-headline font-semibold py-4 px-10 rounded-xl flex items-center gap-3 transition-all hover:scale-[1.02] active:scale-95 ambient-glow">
+<span class="material-symbols-outlined font-bold" data-icon="refresh">refresh</span>
+<span class="tracking-widest uppercase text-sm">YENİDEN DENE</span>
+</button>
+<div class="mt-8 flex items-center gap-6 opacity-60">
+<button class="font-label text-[10px] tracking-[0.2em] uppercase text-secondary hover:text-primary transition-colors">YARDIM AL</button>
+<span class="w-1 h-1 bg-outline-variant/30 rounded-full"></span>
+<button class="font-label text-[10px] tracking-[0.2em] uppercase text-secondary hover:text-primary transition-colors">SİSTEM DURUMU</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Decorative Corner Elements (Temporal Brutalism) -->
+<div class="hidden md:block fixed top-32 left-12 font-label text-[10px] tracking-[0.5em] vertical-text text-outline-variant/40 select-none" style="writing-mode: vertical-rl;">
+        CONNECTION_LOST_404
+    </div>
+<div class="hidden md:block fixed bottom-32 right-12 font-label text-[10px] tracking-[0.5em] vertical-text text-outline-variant/40 select-none" style="writing-mode: vertical-rl;">
+        RETRY_SEQUENCE_READY
+    </div>
+<!-- BottomNavBar -->
+<!-- Note: Following the "Destination Rule", we render the Nav as this acts as the global wrapper for the app sub-states -->
+<nav class="bg-[#09122b]/60 backdrop-blur-2xl fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 z-50 rounded-t-[1.5rem] shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
+<a class="flex flex-col items-center justify-center text-[#939eb5] px-4 py-2 hover:bg-[#0a2257]/50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="alarm">alarm</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.1em]">Alarm</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c4c7c9] bg-[#0a2257] rounded-xl px-4 py-2" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="public">public</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.1em]">Dünya Saati</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#939eb5] px-4 py-2 hover:bg-[#0a2257]/50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="timer">timer</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.1em]">Kronometre</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#939eb5] px-4 py-2 hover:bg-[#0a2257]/50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="hourglass_empty">hourglass_empty</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-[0.1em]">Zamanlayıcı</span>
+</a>
+</nav>
+</body></html>
