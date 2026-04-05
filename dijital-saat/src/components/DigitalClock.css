@@ -1,0 +1,19 @@
+.digital-clock {
+  text-align: center;
+}
+
+.time-display {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 0 0 40px rgba(196, 199, 201, 0.15);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-headline);
+}
+
+@media (max-width: 768px) {
+  .time-display {
+    font-size: 3.5rem;
+  }
+}
