@@ -1,0 +1,45 @@
+.analog-clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.clock-face {
+  width: 300px;
+  height: 300px;
+}
+
+.clock-circle {
+  fill: none;
+  stroke: var(--color-text-primary, #ffffff);
+  stroke-width: 2;
+}
+
+.hour-marker {
+  stroke: var(--color-text-secondary, #94a3b8);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.hour-hand {
+  stroke: var(--color-text-primary, #ffffff);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.minute-hand {
+  stroke: var(--color-text-primary, #ffffff);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.second-hand {
+  stroke: var(--color-accent, #ef4444);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.center-dot {
+  fill: var(--color-accent, #ef4444);
+}
