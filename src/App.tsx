@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react'
-import { AnalogClock } from './components/AnalogClock'
-import { Settings, useClockTypePreference } from './components/Settings'
+import { AnalogClock, Settings, DigitalClock, DateDisplay, type ClockType } from './components'
 import './App.css'
 
-function App() {
+const STORAGE_KEY = 'clock-type-preference'
+
+export function App() {
   const [time, setTime] = useState(new Date())
-  const [clockType, setClockType] = useClockTypePreference()
+  const [clockType, setClockType] = useState<ClockType>(() => {
+    if (typeof localStorage !== 'undefined') {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      return (saved as ClockType) || 'digital'
+    }
+    return 'digital'
+  })
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -14,38 +21,29 @@ function App() {
     return () => clearInterval(timer)
   }, [])
 
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('tr-TR', { hour12: false })
-  }
-
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('tr-TR', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
+  const handleClockTypeChange = (type: ClockType) => {
+    setClockType(type)
+    localStorage.setItem(STORAGE_KEY, type)
   }
 
   return (
     <div className="app-container">
       <header className="app-header">
         <div className="app-title">Saat</div>
-        <Settings clockType={clockType} onClockTypeChange={setClockType} />
+        <Settings clockType={clockType} onClockTypeChange={handleClockTypeChange} />
       </header>
 
       <main className="app-main">
-        {clockType === 'digital' ? (
-          <div className="digital-clock">
-            <div className="time">{formatTime(time)}</div>
-            <div className="date">{formatDate(time)}</div>
-          </div>
-        ) : (
-          <div className="analog-clock-wrapper">
+        <div className="clock-wrapper">
+          {clockType === 'digital' ? (
+            <DigitalClock time={time} />
+          ) : (
             <AnalogClock time={time} />
-            <div className="date">{formatDate(time)}</div>
-          </div>
-        )}
+          )}
+        </div>
+        <div className="date-wrapper">
+          <DateDisplay date={time} />
+        </div>
       </main>
     </div>
   )

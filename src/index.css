@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
-@import './stitch/design-tokens.css';
+@import './tokens.css';
 
 * {
   margin: 0;
@@ -9,38 +7,17 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--color-background);
-  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #root {
   width: 100%;
-  min-height: 100vh;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-
-.clock-vortex {
-  background: radial-gradient(circle at center, rgba(8, 39, 104, 0.15) 0%, rgba(7, 13, 31, 1) 70%);
-}
-
-.monolith-shadow {
-  text-shadow: 0 0 40px rgba(196, 199, 201, 0.15);
-}
-
-.monolith-vortex {
-  background: radial-gradient(circle at center, rgba(8, 39, 104, 0.15) 0%, rgba(7, 13, 31, 1) 100%);
-}
-
-.ambient-glow {
-  box-shadow: 0 0 40px 0px rgba(196, 199, 201, 0.08);
-}
-
-.glass-panel {
-  background: rgba(11, 29, 72, 0.6);
-  backdrop-filter: blur(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

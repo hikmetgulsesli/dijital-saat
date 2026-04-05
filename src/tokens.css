@@ -1,2 +1,18 @@
 /* Design tokens for dijital-saat project */
-/* This file references the Stitch design-tokens.css */
+:root {
+  --color-bg: #020617;
+  --color-surface: #0a1839;
+  --color-surface-container-low: #09122b;
+  --color-surface-container-high: #0b1d48;
+  --color-surface-variant: #0a2257;
+  --color-primary: #c4c7c9;
+  --color-secondary: #939eb5;
+  --color-tertiary: #c7d5ee;
+  --color-on-surface: #dfe4ff;
+  --color-on-surface-variant: #96a9e6;
+  --color-outline: #6073ad;
+  --color-outline-variant: #32457c;
+  --color-error: #ee7d77;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
