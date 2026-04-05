@@ -1,0 +1,136 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0c1324;
+  color: #dce1fb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 5rem;
+  background-color: rgba(7, 13, 31, 0.6);
+  backdrop-filter: blur(2xl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.app-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 6rem;
+  min-height: 100vh;
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: #c6c6c6;
+}
+
+.digital-clock {
+  text-align: center;
+}
+
+.time {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(6rem, 20vw, 12rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-shadow: 0 0 80px 10px rgba(0, 0, 0, 0.4);
+}
+
+.date {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #c6c6c6;
+  margin-top: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.analog-clock-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem;
+  background-color: rgba(9, 18, 43, 0.6);
+  backdrop-filter: blur(2xl);
+  z-index: 50;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  color: #939eb5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.nav-button.active {
+  color: #ffffff;
+  background-color: #0a2257;
+}
+
+.nav-button span:last-child {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 1rem;
+  }
+
+  .time {
+    font-size: clamp(4rem, 18vw, 8rem);
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+}

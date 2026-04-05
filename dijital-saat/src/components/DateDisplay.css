@@ -1,0 +1,21 @@
+.date-display {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .date-display {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-display {
+    font-size: 1rem;
+  }
+}
