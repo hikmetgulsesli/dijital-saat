@@ -9,17 +9,13 @@ const STORAGE_KEY = 'dijital-saat-clock-type'
 
 function App() {
   const [time, setTime] = useState(new Date())
-  const [clockType, setClockType] = useState<ClockType>('digital')
-  const [mounted, setMounted] = useState(false)
-
-  // Load preference from localStorage on mount
-  useEffect(() => {
+  const [clockType, setClockType] = useState<ClockType>(() => {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved === 'digital' || saved === 'analog') {
-      setClockType(saved)
+      return saved
     }
-    setMounted(true)
-  }, [])
+    return 'digital'
+  })
 
   // Update time every second
   useEffect(() => {
@@ -52,14 +48,6 @@ function App() {
       day: 'numeric'
     }
     return date.toLocaleDateString('tr-TR', options)
-  }
-
-  if (!mounted) {
-    return (
-      <div className="container">
-        <div className="loading">Yükleniyor...</div>
-      </div>
-    )
   }
 
   return (
