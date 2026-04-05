@@ -1,0 +1,30 @@
+.container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.time {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
+  letter-spacing: 0.1em;
+  font-variant-numeric: tabular-nums;
+}
+
+.date {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .time {
+    font-size: 3.5rem;
+  }
+  
+  .date {
+    font-size: 1rem;
+  }
+}
