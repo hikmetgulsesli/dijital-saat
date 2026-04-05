@@ -1,0 +1,23 @@
+.digital-clock {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary, #c4c7c9);
+  text-shadow: 0 0 30px rgba(196, 199, 201, 0.3);
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .digital-clock {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-clock {
+    font-size: 3.5rem;
+  }
+}
