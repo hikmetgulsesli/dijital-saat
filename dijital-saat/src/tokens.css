@@ -1,0 +1,77 @@
+:root {
+  /* Background Colors */
+  --color-bg: #020617;
+  --color-background: #070d1f;
+  --color-surface: #070d1f;
+  --color-surface-container: #0a1839;
+  --color-surface-container-high: #0b1d48;
+  --color-surface-container-low: #09122b;
+  --color-surface-bright: #082768;
+  --color-surface-variant: #0a2257;
+
+  /* Text Colors */
+  --color-text: #ffffff;
+  --color-on-surface: #dfe4ff;
+  --color-on-surface-variant: #96a9e6;
+  --color-on-background: #dfe4ff;
+
+  /* Primary Colors */
+  --color-primary: #c4c7c9;
+  --color-on-primary: #3d4142;
+  --color-primary-container: #444749;
+  --color-on-primary-container: #ced1d2;
+  --color-primary-dim: #b6b9bb;
+  --color-primary-fixed: #e0e3e5;
+  --color-primary-fixed-dim: #d2d5d7;
+
+  /* Secondary Colors */
+  --color-secondary: #939eb5;
+  --color-on-secondary: #152032;
+  --color-secondary-container: #313c4f;
+  --color-on-secondary-container: #b4c0d7;
+  --color-secondary-dim: #939eb5;
+  --color-secondary-fixed: #d8e3fb;
+  --color-secondary-fixed-dim: #cad5ed;
+
+  /* Tertiary Colors */
+  --color-tertiary: #ebf1ff;
+  --color-on-tertiary: #4d5b70;
+  --color-tertiary-container: #d5e3fd;
+  --color-on-tertiary-container: #455367;
+  --color-tertiary-dim: #c7d5ee;
+  --color-tertiary-fixed: #d5e3fd;
+  --color-tertiary-fixed-dim: #c7d5ee;
+
+  /* Error Colors */
+  --color-error: #ee7d77;
+  --color-error-dim: #bb5551;
+  --color-on-error: #490106;
+  --color-error-container: #7f2927;
+  --color-on-error-container: #ff9993;
+
+  /* Outline */
+  --color-outline: #6073ad;
+  --color-outline-variant: #32457c;
+
+  /* Inverse Colors */
+  --color-inverse-surface: #faf8ff;
+  --color-inverse-on-surface: #4f5469;
+  --color-inverse-primary: #5c5f61;
+
+  /* Surface Tint */
+  --color-surface-tint: #c4c7c9;
+
+  /* Fixed Colors */
+  --color-on-primary-fixed: #3c4042;
+  --color-on-primary-fixed-variant: #595c5e;
+  --color-on-secondary-fixed: #354053;
+  --color-on-secondary-fixed-variant: #515c70;
+  --color-on-tertiary-fixed: #324054;
+  --color-on-tertiary-fixed-variant: #4e5c71;
+
+  /* Fonts */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-headline: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Inter', sans-serif;
+}
