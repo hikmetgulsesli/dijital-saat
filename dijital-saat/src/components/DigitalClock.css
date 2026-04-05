@@ -1,0 +1,14 @@
+.digital-clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 15vw, 8rem);
+  font-weight: 700;
+  color: var(--color-text-primary, #ffffff);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
