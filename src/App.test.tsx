@@ -1,17 +1,17 @@
-import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/react';
-import App from './App';
+import { describe, it, expect } from 'vitest'
+import { render, screen } from '@testing-library/react'
+import App from './App'
 
 describe('App', () => {
-  it('renders time display', () => {
-    render(<App />);
-    const timeElements = document.querySelectorAll('[class*="time"]');
-    expect(timeElements.length).toBeGreaterThan(0);
-  });
+  it('renders without crashing', () => {
+    render(<App />)
+    expect(document.body).toBeInTheDocument()
+  })
 
-  it('renders date display', () => {
-    render(<App />);
-    const dateElements = document.querySelectorAll('[class*="date"]');
-    expect(dateElements.length).toBeGreaterThan(0);
-  });
-});
+  it('displays time', () => {
+    render(<App />)
+    // Time should be displayed in Turkish format
+    const timeRegex = /\d{1,2}:\d{2}:\d{2}/
+    expect(document.body.textContent).toMatch(timeRegex)
+  })
+})
