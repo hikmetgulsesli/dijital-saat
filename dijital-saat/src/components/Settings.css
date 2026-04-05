@@ -1,0 +1,50 @@
+.settings-panel {
+  padding: 1.5rem;
+  background: var(--color-surface-container);
+  border-radius: var(--radius-lg);
+}
+
+.setting-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.setting-title {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.toggle-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-headline), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--color-secondary);
+}
+
+.toggle-btn:hover {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.toggle-btn.active {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
