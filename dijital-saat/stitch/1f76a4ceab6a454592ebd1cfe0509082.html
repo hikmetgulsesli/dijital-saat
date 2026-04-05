@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEMPORAL | AYARLAR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#e0e3e5",
+                    "inverse-primary": "#5c5f61",
+                    "on-surface": "#dce1fb",
+                    "on-tertiary-fixed-variant": "#d3e4fe",
+                    "on-tertiary-fixed": "#ffffff",
+                    "secondary-container": "#39485a",
+                    "on-tertiary-container": "#000000",
+                    "on-primary-fixed": "#ffffff",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "tertiary-fixed": "#505f76",
+                    "primary-fixed-dim": "#444749",
+                    "secondary-fixed": "#b9c8de",
+                    "tertiary-container": "#8292aa",
+                    "surface-variant": "#2e3447",
+                    "on-tertiary": "#0b1c30",
+                    "outline": "#919191",
+                    "primary-container": "#d2d5d7",
+                    "on-secondary-fixed-variant": "#2e3c4e",
+                    "on-secondary-container": "#d4e4fa",
+                    "on-error": "#690005",
+                    "surface": "#0c1324",
+                    "surface-bright": "#33394c",
+                    "error-container": "#93000a",
+                    "primary": "#ffffff",
+                    "surface-container-lowest": "#070d1f",
+                    "background": "#0c1324",
+                    "surface-container-low": "#151b2d",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#9dacc2",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#0c1324",
+                    "inverse-surface": "#dce1fb",
+                    "on-primary-container": "#000000",
+                    "tertiary-fixed-dim": "#38485d",
+                    "surface-tint": "#c4c7c9",
+                    "surface-container": "#191f31",
+                    "inverse-on-surface": "#2a3043",
+                    "surface-container-high": "#23293c",
+                    "on-primary": "#191c1e",
+                    "on-surface-variant": "#c6c6c6",
+                    "tertiary": "#d3e4fe",
+                    "primary-fixed": "#5c5f61",
+                    "outline-variant": "#474747",
+                    "on-secondary": "#0d1c2d",
+                    "secondary": "#b9c8de",
+                    "surface-container-highest": "#2e3447",
+                    "on-background": "#dce1fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "0px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c1324;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .monolith-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2px;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .monolith-cell {
+            background-color: #0c1324;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-slate-950 text-white font-['Space_Grotesk'] tracking-tighter uppercase docked full-width top-0 bg-slate-900 flat no shadows flex justify-between items-center w-full px-8 h-16 fixed z-50">
+<div class="text-2xl font-bold tracking-tighter text-white">TEMPORAL</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 hover:text-white transition-none" href="#">SAAT</a>
+<a class="text-white border-b-2 border-white pb-1" href="#">AYARLAR</a>
+</nav>
+</header>
+<!-- SideNavBar -->
+<aside class="bg-slate-950 text-white font-['Space_Grotesk'] tracking-tight docked left-0 h-full w-64 border-r border-white/10 flat no shadows fixed left-0 top-0 h-full flex flex-col pt-20 z-40">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-black text-white">TEMPORAL</h1>
+<p class="text-[10px] tracking-[0.2em] text-slate-500">MONOLITH V1.0</p>
+</div>
+<div class="flex flex-col flex-1">
+<a class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="uppercase tracking-widest text-xs">DİJİTAL</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="watch">watch</span>
+<span class="uppercase tracking-widest text-xs">ANALOG</span>
+</a>
+<a class="flex items-center gap-4 bg-white text-slate-950 p-4 w-full transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="uppercase tracking-widest text-xs font-bold">AYARLAR</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen pb-10">
+<div class="max-w-5xl mx-auto p-12">
+<div class="mb-16 border-l-4 border-white pl-8">
+<h2 class="font-headline text-5xl font-bold tracking-tighter uppercase text-white">AYARLAR</h2>
+<p class="font-label text-slate-500 tracking-[0.2em] mt-2">SİSTEM KONFİGÜRASYONU / PANEL_04</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+<!-- Appearance Mode Section -->
+<div class="bg-surface-container p-10 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label text-[10px] tracking-[0.3em] text-slate-500 block mb-4 uppercase">MODÜL_01</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase text-white mb-2">Görünüm Modu</h3>
+<p class="font-body text-sm text-slate-400 mb-8 max-w-xs">Arayüzün ana zaman gösterim biçimini belirleyin.</p>
+</div>
+<div class="flex gap-1 bg-surface-container-low p-1">
+<button class="flex-1 py-4 bg-primary text-on-primary font-headline font-bold text-xs tracking-widest uppercase">DİJİTAL</button>
+<button class="flex-1 py-4 bg-transparent text-slate-500 font-headline font-bold text-xs tracking-widest uppercase hover:text-white transition-none">ANALOG</button>
+</div>
+</div>
+<!-- Theme Selection Section -->
+<div class="bg-surface-container p-10 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label text-[10px] tracking-[0.3em] text-slate-500 block mb-4 uppercase">MODÜL_02</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase text-white mb-2">Tema</h3>
+<p class="font-body text-sm text-slate-400 mb-8 max-w-xs">Görsel atmosferi sistem gereksinimlerinize göre ayarlayın.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-4 bg-surface-bright group cursor-pointer">
+<span class="font-headline font-bold text-xs tracking-widest text-white uppercase">KARANLIK</span>
+<div class="w-4 h-4 border border-white flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-white"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low group cursor-pointer hover:bg-slate-800 transition-none">
+<span class="font-headline font-bold text-xs tracking-widest text-slate-500 uppercase">SİSTEM</span>
+<div class="w-4 h-4 border border-slate-700"></div>
+</div>
+</div>
+</div>
+<!-- Typography Section -->
+<div class="bg-surface-container p-10 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label text-[10px] tracking-[0.3em] text-slate-500 block mb-4 uppercase">MODÜL_03</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase text-white mb-2">Tipografi</h3>
+<p class="font-body text-sm text-slate-400 mb-8 max-w-xs">Veri okunabilirliği için yazı tipi ailesini seçin.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 cursor-pointer">
+<div class="w-12 h-12 bg-white flex items-center justify-center">
+<span class="text-slate-950 font-headline font-bold text-lg">Sg</span>
+</div>
+<div class="flex-1">
+<span class="block font-headline text-sm font-bold text-white tracking-tight uppercase">Space Grotesk</span>
+<span class="block font-label text-[10px] text-slate-500 tracking-widest uppercase">AKTİF</span>
+</div>
+</div>
+<div class="flex items-center gap-4 cursor-pointer opacity-40 hover:opacity-100 transition-none">
+<div class="w-12 h-12 bg-slate-800 flex items-center justify-center">
+<span class="text-white font-body font-bold text-lg">In</span>
+</div>
+<div class="flex-1">
+<span class="block font-body text-sm font-bold text-white tracking-tight uppercase">Inter</span>
+<span class="block font-label text-[10px] text-slate-500 tracking-widest uppercase">SEÇİLEBİLİR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Factory Reset Section -->
+<div class="bg-surface-container p-10 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="font-label text-[10px] tracking-[0.3em] text-slate-500 block mb-4 uppercase">MODÜL_04</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase text-white mb-2">Sistem Sıfırlama</h3>
+<p class="font-body text-sm text-slate-400 mb-8 max-w-xs">Tüm konfigürasyonları fabrika ayarlarına döndürür. Bu işlem geri alınamaz.</p>
+</div>
+<button class="w-full py-6 bg-transparent border-2 border-error text-error font-headline font-bold text-xs tracking-[0.3em] uppercase hover:bg-error hover:text-on-error transition-none">
+                        FABRİKA AYARLARI
+                    </button>
+</div>
+</div>
+<!-- System Info Section (Bento style) -->
+<div class="mt-1 bg-surface-container-high p-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex gap-12">
+<div>
+<span class="font-label text-[10px] tracking-widest text-slate-500 uppercase block mb-1">VERSİYON</span>
+<span class="font-headline text-lg font-bold text-white">1.0.4-STABLE</span>
+</div>
+<div>
+<span class="font-label text-[10px] tracking-widest text-slate-500 uppercase block mb-1">DERLEME</span>
+<span class="font-headline text-lg font-bold text-white">2024.MAY.24</span>
+</div>
+</div>
+<div class="flex gap-2 items-center">
+<div class="w-2 h-2 bg-white"></div>
+<span class="font-label text-[10px] tracking-[0.3em] text-white uppercase">SİSTEM_DURUMU: NOMİNAL</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 text-slate-500 font-['Inter'] text-[10px] tracking-[0.1em] uppercase docked full-width bottom-0 bg-slate-900 flat no shadows flex justify-between items-center w-full px-8 h-10 fixed bottom-0 left-0 z-50">
+<div>© 2024 TEMPORAL MONOLITH | v1.0.4-STABLE</div>
+<div class="flex gap-8">
+<span class="text-white">SİSTEM DURUMU: AKTİF</span>
+<span>24 MAYIS CUMA</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,768 @@
+{
+  "generatedAt": "2026-04-05T11:13:18.482Z",
+  "screenCount": 4,
+  "screens": {
+    "1f76a4ceab6a454592ebd1cfe0509082": {
+      "screenId": "1f76a4ceab6a454592ebd1cfe0509082",
+      "sections": [
+        {
+          "tag": "header",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tighter",
+            "uppercase",
+            "docked",
+            "full-width",
+            "top-0",
+            "bg-slate-900",
+            "flat"
+          ],
+          "childCount": 1
+        },
+        {
+          "tag": "aside",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tight",
+            "docked",
+            "left-0",
+            "h-full",
+            "w-64",
+            "border-r",
+            "border-white/10"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "ml-64",
+            "pt-16",
+            "min-h-screen",
+            "pb-10"
+          ],
+          "childCount": 32
+        },
+        {
+          "tag": "footer",
+          "classes": [
+            "bg-slate-950",
+            "text-slate-500",
+            "font-['Inter']",
+            "text-[10px]",
+            "tracking-[0.1em]",
+            "uppercase",
+            "docked",
+            "full-width",
+            "bottom-0",
+            "bg-slate-900"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [
+        {
+          "label": "DİJİTAL",
+          "classes": [
+            "flex-1",
+            "py-4",
+            "bg-primary",
+            "text-on-primary",
+            "font-headline",
+            "font-bold",
+            "text-xs",
+            "tracking-widest",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "ANALOG",
+          "classes": [
+            "flex-1",
+            "py-4",
+            "bg-transparent",
+            "text-slate-500",
+            "font-headline",
+            "font-bold",
+            "text-xs",
+            "tracking-widest",
+            "uppercase",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "FABRİKA AYARLARI",
+          "classes": [
+            "w-full",
+            "py-6",
+            "bg-transparent",
+            "border-2",
+            "border-error",
+            "text-error",
+            "font-headline",
+            "font-bold",
+            "text-xs",
+            "tracking-[0.3em]",
+            "uppercase",
+            "hover:bg-error",
+            "hover:text-on-error",
+            "transition-none"
+          ],
+          "icon": null,
+          "action": "click-action"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "SAAT",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": null
+        },
+        {
+          "label": "AYARLAR",
+          "href": "#",
+          "classes": [
+            "text-white",
+            "border-b-2",
+            "border-white",
+            "pb-1"
+          ],
+          "icon": null
+        },
+        {
+          "label": "schedule\nDİJİTAL",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": "schedule"
+        },
+        {
+          "label": "watch\nANALOG",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": "watch"
+        },
+        {
+          "label": "settings\nAYARLAR",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "bg-white",
+            "text-slate-950",
+            "p-4",
+            "w-full",
+            "transition-none"
+          ],
+          "icon": "settings"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "schedule",
+        "watch",
+        "settings"
+      ],
+      "images": [],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "8"
+      },
+      "tabBar": [
+        {
+          "label": "SAAT",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "24 MAYIS CUMA",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Ayarlar"
+    },
+    "942092d55b2e4a1696f44ac514b41e38": {
+      "screenId": "942092d55b2e4a1696f44ac514b41e38",
+      "sections": [
+        {
+          "tag": "header",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tighter",
+            "uppercase",
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "px-8"
+          ],
+          "childCount": 1
+        },
+        {
+          "tag": "aside",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tight",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-64",
+            "border-r"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "md:pl-64",
+            "pt-16",
+            "min-h-screen",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "relative",
+            "overflow-hidden"
+          ],
+          "childCount": 19
+        },
+        {
+          "tag": "footer",
+          "classes": [
+            "bg-slate-950",
+            "text-slate-500",
+            "font-['Inter']",
+            "text-[10px]",
+            "tracking-[0.1em]",
+            "uppercase",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "SAAT",
+          "href": "#",
+          "classes": [
+            "text-white",
+            "border-b-2",
+            "border-white",
+            "pb-1",
+            "transition-none"
+          ],
+          "icon": null
+        },
+        {
+          "label": "AYARLAR",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": null
+        },
+        {
+          "label": "schedule\nDİJİTAL",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "bg-white",
+            "text-slate-950",
+            "p-4",
+            "w-full",
+            "transition-none"
+          ],
+          "icon": "schedule"
+        },
+        {
+          "label": "watch\nANALOG",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": "watch"
+        },
+        {
+          "label": "settings\nAYARLAR",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": "settings"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "schedule",
+        "watch",
+        "settings",
+        "nights_stay"
+      ],
+      "images": [],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "8"
+      },
+      "tabBar": [
+        {
+          "label": "SAAT",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "DİJİTAL",
+          "icon": "schedule",
+          "active": false
+        },
+        {
+          "label": "ANALOG",
+          "icon": "watch",
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "24 MAYIS CUMA",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Dijital Saat Görünümü"
+    },
+    "a98002ca3ae648a593625548572615e5": {
+      "screenId": "a98002ca3ae648a593625548572615e5",
+      "sections": [
+        {
+          "tag": "header",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tighter",
+            "uppercase",
+            "docked",
+            "full-width",
+            "top-0",
+            "flex",
+            "justify-between"
+          ],
+          "childCount": 1
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "flex-grow",
+            "flex",
+            "items-center",
+            "justify-center",
+            "monolith-grid",
+            "relative",
+            "px-6"
+          ],
+          "childCount": 14
+        },
+        {
+          "tag": "aside",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "flex",
+            "flex-col",
+            "pt-20",
+            "bg-slate-950",
+            "font-['Space_Grotesk']",
+            "tracking-tight"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "footer",
+          "classes": [
+            "bg-slate-950",
+            "text-slate-500",
+            "font-['Inter']",
+            "text-[10px]",
+            "tracking-[0.1em]",
+            "uppercase",
+            "docked",
+            "full-width",
+            "bottom-0",
+            "flex"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [
+        {
+          "label": "YENİDEN DENE",
+          "classes": [
+            "bg-white",
+            "text-slate-950",
+            "font-headline",
+            "font-bold",
+            "text-xl",
+            "px-12",
+            "py-5",
+            "hover:bg-error",
+            "hover:text-on-error",
+            "transition-none",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "create"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "SAAT",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none",
+            "h-full",
+            "flex",
+            "items-center"
+          ],
+          "icon": null
+        },
+        {
+          "label": "AYARLAR",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none",
+            "h-full",
+            "flex",
+            "items-center"
+          ],
+          "icon": null
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "signal_disconnected",
+        "schedule",
+        "watch",
+        "settings"
+      ],
+      "images": [],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "8"
+      },
+      "tabBar": [
+        {
+          "label": "SAAT",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "24 MAYIS CUMA",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Hata Durumu"
+    },
+    "e48cf302221440a1b2f07e316b10852c": {
+      "screenId": "e48cf302221440a1b2f07e316b10852c",
+      "sections": [
+        {
+          "tag": "header",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tighter",
+            "uppercase",
+            "fixed",
+            "top-0",
+            "left-0",
+            "w-full",
+            "px-8"
+          ],
+          "childCount": 1
+        },
+        {
+          "tag": "aside",
+          "classes": [
+            "bg-slate-950",
+            "text-white",
+            "font-['Space_Grotesk']",
+            "tracking-tight",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-64",
+            "border-r"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "ml-64",
+            "pt-16",
+            "h-screen",
+            "relative",
+            "flex",
+            "items-center",
+            "justify-center",
+            "overflow-hidden"
+          ],
+          "childCount": 31
+        },
+        {
+          "tag": "footer",
+          "classes": [
+            "bg-slate-950",
+            "text-slate-500",
+            "font-['Inter']",
+            "text-[10px]",
+            "tracking-[0.1em]",
+            "uppercase",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "SAAT",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": null
+        },
+        {
+          "label": "AYARLAR",
+          "href": "#",
+          "classes": [
+            "text-slate-500",
+            "hover:text-white",
+            "transition-none"
+          ],
+          "icon": null
+        },
+        {
+          "label": "schedule\nDİJİTAL",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none",
+            "group"
+          ],
+          "icon": "schedule"
+        },
+        {
+          "label": "watch\nANALOG",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "bg-white",
+            "text-slate-950",
+            "p-4",
+            "w-full",
+            "group"
+          ],
+          "icon": "watch"
+        },
+        {
+          "label": "settings\nAYARLAR",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "text-slate-500",
+            "p-4",
+            "w-full",
+            "hover:bg-slate-900",
+            "hover:text-white",
+            "transition-none",
+            "group"
+          ],
+          "icon": "settings"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "schedule",
+        "watch",
+        "settings"
+      ],
+      "images": [],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 12,
+        "flexDirection": "col",
+        "gap": "8"
+      },
+      "tabBar": [
+        {
+          "label": "SAAT",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "DİJİTAL",
+          "icon": "schedule",
+          "active": false
+        },
+        {
+          "label": "ANALOG",
+          "icon": "watch",
+          "active": false
+        },
+        {
+          "label": "AYARLAR",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "24 MAYIS CUMA",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Analog Saat Görünümü"
+    }
+  }
+}

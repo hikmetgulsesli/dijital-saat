@@ -1,0 +1,28 @@
+# dijital-saat
+## 1 Genel
+Proje: dijital-saat Platform: Web SPA. Tek sayfalk dijital saat. HH:MM:SS buyuk font, Turkce tarih, koyu tema, minimal.
+## 2 Ozellikler
+1 Dijital Saat HH:MM:SS buyuk font
+2 Turkce Tarih GG AY YYYY
+3 Analog Saat SVG opsiyonel
+4 Ayarlar Analog/dijital gecis localStorage
+5 Koyu Tema slate-950
+## 3 Teknik
+React 18 Vite Tailwind TypeScript Vitest
+## 4 Ekranlar
+| # Ekran Tur Aciklama |
+|---|---|
+| 1 Dijital Saat utility HH:MM:SS |
+| 2 Analog Saat utility SVG |
+| 3 Ayarlar utility gecis |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

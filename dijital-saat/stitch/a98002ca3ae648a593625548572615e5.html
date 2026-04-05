@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#e0e3e5",
+                      "inverse-primary": "#5c5f61",
+                      "on-surface": "#dce1fb",
+                      "on-tertiary-fixed-variant": "#d3e4fe",
+                      "on-tertiary-fixed": "#ffffff",
+                      "secondary-container": "#39485a",
+                      "on-tertiary-container": "#000000",
+                      "on-primary-fixed": "#ffffff",
+                      "on-secondary-fixed": "#0d1c2d",
+                      "tertiary-fixed": "#505f76",
+                      "primary-fixed-dim": "#444749",
+                      "secondary-fixed": "#b9c8de",
+                      "tertiary-container": "#8292aa",
+                      "surface-variant": "#2e3447",
+                      "on-tertiary": "#0b1c30",
+                      "outline": "#919191",
+                      "primary-container": "#d2d5d7",
+                      "on-secondary-fixed-variant": "#2e3c4e",
+                      "on-secondary-container": "#d4e4fa",
+                      "on-error": "#690005",
+                      "surface": "#0c1324",
+                      "surface-bright": "#33394c",
+                      "error-container": "#93000a",
+                      "primary": "#ffffff",
+                      "surface-container-lowest": "#070d1f",
+                      "background": "#0c1324",
+                      "surface-container-low": "#151b2d",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#9dacc2",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#0c1324",
+                      "inverse-surface": "#dce1fb",
+                      "on-primary-container": "#000000",
+                      "tertiary-fixed-dim": "#38485d",
+                      "surface-tint": "#c4c7c9",
+                      "surface-container": "#191f31",
+                      "inverse-on-surface": "#2a3043",
+                      "surface-container-high": "#23293c",
+                      "on-primary": "#191c1e",
+                      "on-surface-variant": "#c6c6c6",
+                      "tertiary": "#d3e4fe",
+                      "primary-fixed": "#5c5f61",
+                      "outline-variant": "#474747",
+                      "on-secondary": "#0d1c2d",
+                      "secondary": "#b9c8de",
+                      "surface-container-highest": "#2e3447",
+                      "on-background": "#dce1fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48;
+        }
+        body {
+            background-color: #0c1324;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .monolith-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<header class="bg-slate-950 text-white font-['Space_Grotesk'] tracking-tighter uppercase docked full-width top-0 flex justify-between items-center w-full px-8 h-16 z-50">
+<div class="text-2xl font-bold tracking-tighter text-white">TEMPORAL</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-slate-500 hover:text-white transition-none h-full flex items-center" href="#">SAAT</a>
+<a class="text-slate-500 hover:text-white transition-none h-full flex items-center" href="#">AYARLAR</a>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center monolith-grid relative px-6">
+<div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+<div class="text-[20vw] font-headline font-black tracking-tighter text-surface-container-highest select-none">
+                ERROR
+            </div>
+</div>
+<div class="relative z-10 w-full max-w-4xl flex flex-col items-center">
+<div class="mb-12 bg-surface-container p-8 relative">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<span class="material-symbols-outlined text-error text-8xl" style="font-variation-settings: 'wght' 100;">signal_disconnected</span>
+</div>
+<div class="text-center space-y-4">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white uppercase leading-none">
+                    BİR HATA OLUŞTU
+                </h1>
+<p class="font-body text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Saat sunucusuna bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.
+                </p>
+</div>
+<div class="mt-16 flex flex-col md:flex-row items-center gap-12 w-full border-t border-white/5 pt-12">
+<div class="flex-1 text-left w-full">
+<div class="font-label text-[10px] tracking-[0.2em] text-slate-500 uppercase mb-2">HATA KODU</div>
+<div class="font-headline text-2xl font-medium tracking-tight text-error">ERR_TIM_004</div>
+</div>
+<div class="flex-none">
+<button class="bg-white text-slate-950 font-headline font-bold text-xl px-12 py-5 hover:bg-error hover:text-on-error transition-none uppercase">
+                        YENİDEN DENE
+                    </button>
+</div>
+<div class="flex-1 text-right w-full hidden md:block">
+<div class="font-label text-[10px] tracking-[0.2em] text-slate-500 uppercase mb-2">DURUM</div>
+<div class="font-headline text-2xl font-medium tracking-tight text-slate-400">ÇEVRİMDIŞI</div>
+</div>
+</div>
+</div>
+</main>
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 bg-slate-950 font-['Space_Grotesk'] tracking-tight border-r border-white/10 w-64 hidden xl:flex z-40">
+<div class="px-6 mb-8">
+<div class="text-xl font-black text-white">TEMPORAL</div>
+<div class="text-[10px] tracking-[0.2em] text-slate-500">MONOLITH V1.0</div>
+</div>
+<div class="flex flex-col flex-grow">
+<div class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white cursor-pointer">
+<span class="material-symbols-outlined">schedule</span>
+<span>DİJİTAL</span>
+</div>
+<div class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white cursor-pointer">
+<span class="material-symbols-outlined">watch</span>
+<span>ANALOG</span>
+</div>
+<div class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span>AYARLAR</span>
+</div>
+</div>
+</aside>
+<footer class="bg-slate-950 text-slate-500 font-['Inter'] text-[10px] tracking-[0.1em] uppercase docked full-width bottom-0 flex justify-between items-center w-full px-8 h-10 fixed bottom-0 left-0 z-50">
+<div>© 2024 TEMPORAL MONOLITH | v1.0.4-STABLE</div>
+<div class="flex gap-8">
+<span class="text-error font-bold">SİSTEM DURUMU: KRİTİK</span>
+<span>24 MAYIS CUMA</span>
+</div>
+</footer>
+</body></html>

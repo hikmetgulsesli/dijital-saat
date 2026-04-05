@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEMPORAL | ANALOG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#e0e3e5",
+                    "inverse-primary": "#5c5f61",
+                    "on-surface": "#dce1fb",
+                    "on-tertiary-fixed-variant": "#d3e4fe",
+                    "on-tertiary-fixed": "#ffffff",
+                    "secondary-container": "#39485a",
+                    "on-tertiary-container": "#000000",
+                    "on-primary-fixed": "#ffffff",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "tertiary-fixed": "#505f76",
+                    "primary-fixed-dim": "#444749",
+                    "secondary-fixed": "#b9c8de",
+                    "tertiary-container": "#8292aa",
+                    "surface-variant": "#2e3447",
+                    "on-tertiary": "#0b1c30",
+                    "outline": "#919191",
+                    "primary-container": "#d2d5d7",
+                    "on-secondary-fixed-variant": "#2e3c4e",
+                    "on-secondary-container": "#d4e4fa",
+                    "on-error": "#690005",
+                    "surface": "#0c1324",
+                    "surface-bright": "#33394c",
+                    "error-container": "#93000a",
+                    "primary": "#ffffff",
+                    "surface-container-lowest": "#070d1f",
+                    "background": "#0c1324",
+                    "surface-container-low": "#151b2d",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#9dacc2",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#0c1324",
+                    "inverse-surface": "#dce1fb",
+                    "on-primary-container": "#000000",
+                    "tertiary-fixed-dim": "#38485d",
+                    "surface-tint": "#c4c7c9",
+                    "surface-container": "#191f31",
+                    "inverse-on-surface": "#2a3043",
+                    "surface-container-high": "#23293c",
+                    "on-primary": "#191c1e",
+                    "on-surface-variant": "#c6c6c6",
+                    "tertiary": "#d3e4fe",
+                    "primary-fixed": "#5c5f61",
+                    "outline-variant": "#474747",
+                    "on-secondary": "#0d1c2d",
+                    "secondary": "#b9c8de",
+                    "surface-container-highest": "#2e3447",
+                    "on-background": "#dce1fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c1324;
+            color: #ffffff;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar Section -->
+<header class="bg-slate-950 text-white font-['Space_Grotesk'] tracking-tighter uppercase fixed top-0 left-0 w-full px-8 h-16 flex justify-between items-center z-50">
+<div class="text-2xl font-bold tracking-tighter text-white">TEMPORAL</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-slate-500 hover:text-white transition-none" href="#">SAAT</a>
+<a class="text-slate-500 hover:text-white transition-none" href="#">AYARLAR</a>
+</nav>
+</header>
+<!-- SideNavBar Section -->
+<aside class="bg-slate-950 text-white font-['Space_Grotesk'] tracking-tight fixed left-0 top-0 h-full w-64 border-r border-white/10 flex flex-col pt-20 z-40">
+<div class="px-8 mb-12">
+<h1 class="text-xl font-black text-white">TEMPORAL</h1>
+<p class="text-[10px] tracking-[0.2em] text-slate-500">MONOLITH V1.0</p>
+</div>
+<nav class="flex flex-col w-full">
+<a class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white transition-none group" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium tracking-widest">DİJİTAL</span>
+</a>
+<!-- Active Tab: ANALOG -->
+<a class="flex items-center gap-4 bg-white text-slate-950 p-4 w-full group" href="#">
+<span class="material-symbols-outlined" data-icon="watch">watch</span>
+<span class="text-sm font-bold tracking-widest">ANALOG</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 p-4 w-full hover:bg-slate-900 hover:text-white transition-none group" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm font-medium tracking-widest">AYARLAR</span>
+</a>
+</nav>
+<div class="mt-auto p-8 opacity-20">
+<div class="w-full h-[2px] bg-white mb-2"></div>
+<p class="text-[9px] uppercase tracking-widest leading-relaxed">System Critical<br/>Clock Sync Active</p>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 pt-16 h-screen relative flex items-center justify-center overflow-hidden">
+<!-- Background Monolithic Element -->
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
+<span class="font-headline font-black text-[40rem] tracking-tighter uppercase leading-none">V1</span>
+</div>
+<!-- Clock Interface Layout -->
+<div class="relative z-10 w-full max-w-5xl px-12 grid grid-cols-12 gap-0 items-center">
+<!-- Side Metadata (Left) -->
+<div class="col-span-2 space-y-12 border-l border-white/5 pl-6">
+<div>
+<p class="text-[10px] font-label tracking-[0.2em] text-slate-500 uppercase mb-2">Konum</p>
+<p class="text-sm font-headline font-bold uppercase tracking-tight">İstanbul, TR</p>
+</div>
+<div>
+<p class="text-[10px] font-label tracking-[0.2em] text-slate-500 uppercase mb-2">Referans</p>
+<p class="text-sm font-headline font-bold uppercase tracking-tight">UTC +03:00</p>
+</div>
+<div>
+<p class="text-[10px] font-label tracking-[0.2em] text-slate-500 uppercase mb-2">Hassasiyet</p>
+<p class="text-sm font-headline font-bold uppercase tracking-tight text-primary">+/- 0.001s</p>
+</div>
+</div>
+<!-- Central Clock Face -->
+<div class="col-span-8 flex flex-col items-center justify-center relative">
+<!-- Minimalist SVG Analog Clock -->
+<div class="relative w-[500px] h-[500px] flex items-center justify-center">
+<!-- Outer Ring -->
+<div class="absolute inset-0 border-[0.5px] border-white/10 rounded-full"></div>
+<!-- Inner Markers (12, 3, 6, 9) -->
+<div class="absolute top-4 font-headline font-bold text-sm tracking-widest text-white/40">12</div>
+<div class="absolute right-4 font-headline font-bold text-sm tracking-widest text-white/40">03</div>
+<div class="absolute bottom-4 font-headline font-bold text-sm tracking-widest text-white/40">06</div>
+<div class="absolute left-4 font-headline font-bold text-sm tracking-widest text-white/40">09</div>
+<!-- SVG Face -->
+<svg class="w-full h-full drop-shadow-2xl" viewbox="0 0 100 100">
+<!-- Precise Minute Markers -->
+<g stroke="rgba(255,255,255,0.15)" stroke-width="0.2">
+<line transform="rotate(30 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(60 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(120 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(150 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(210 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(240 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(300 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+<line transform="rotate(330 50 50)" x1="50" x2="50" y1="2" y2="5"></line>
+</g>
+<!-- Hour Hand -->
+<line stroke="white" stroke-linecap="square" stroke-width="2.5" transform="rotate(105 50 50)" x1="50" x2="50" y1="50" y2="28"></line>
+<!-- Minute Hand -->
+<line stroke="white" stroke-linecap="square" stroke-width="1.2" transform="rotate(245 50 50)" x1="50" x2="50" y1="50" y2="15"></line>
+<!-- Second Hand (The Sharp Needle) -->
+<line stroke="#ffb4ab" stroke-linecap="square" stroke-width="0.5" transform="rotate(315 50 50)" x1="50" x2="50" y1="58" y2="8"></line>
+<!-- Center Cap -->
+<circle cx="50" cy="50" fill="white" r="1.5"></circle>
+<circle cx="50" cy="50" fill="black" r="0.5"></circle>
+</svg>
+</div>
+<!-- Secondary Info Below Clock -->
+<div class="mt-16 flex items-baseline gap-12 border-t border-white/5 pt-8 w-full justify-center">
+<div class="text-center">
+<p class="text-[9px] font-label tracking-[0.3em] text-slate-500 uppercase mb-2">Dijital Senkronizasyon</p>
+<h2 class="text-4xl font-headline font-light tracking-tighter text-white">10:41:52</h2>
+</div>
+<div class="text-center">
+<p class="text-[9px] font-label tracking-[0.3em] text-slate-500 uppercase mb-2">Takvim Döngüsü</p>
+<h2 class="text-xl font-headline font-bold tracking-tight text-white uppercase">24 MAYIS CUMA</h2>
+</div>
+</div>
+</div>
+<!-- Side Metadata (Right) -->
+<div class="col-span-2 flex flex-col items-end border-r border-white/5 pr-6 text-right">
+<div class="mb-12">
+<p class="text-[10px] font-label tracking-[0.2em] text-slate-500 uppercase mb-2">Donanım</p>
+<p class="text-xs font-headline font-bold uppercase tracking-widest text-primary">Quartz V.4</p>
+</div>
+<div class="h-48 w-[2px] bg-surface-container-highest relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-primary"></div>
+</div>
+<p class="mt-4 text-[9px] font-label tracking-[0.2em] text-slate-500 uppercase">Sinyal Gücü</p>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-slate-950 text-slate-500 font-['Inter'] text-[10px] tracking-[0.1em] uppercase fixed bottom-0 left-0 w-full px-8 h-10 flex justify-between items-center z-50 bg-slate-900/50 backdrop-blur-sm">
+<div>© 2024 TEMPORAL MONOLITH | v1.0.4-STABLE</div>
+<div class="flex gap-8">
+<span class="text-white">SİSTEM DURUMU: AKTİF</span>
+<span>24 MAYIS CUMA</span>
+</div>
+</footer>
+<!-- Structural Detail: Vertical Strip Indicator -->
+<div class="fixed left-0 top-1/2 -translate-y-1/2 w-1 h-32 bg-white z-50"></div>
+</body></html>
