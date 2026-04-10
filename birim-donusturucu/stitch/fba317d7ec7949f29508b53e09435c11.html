@@ -1,0 +1,386 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-lowest": "#0c0e0f",
+                  "on-primary-container": "#00626e",
+                  "tertiary-container": "#fec931",
+                  "on-error-container": "#ffdad6",
+                  "error": "#ffb4ab",
+                  "outline": "#849396",
+                  "on-background": "#e2e2e3",
+                  "surface-container-highest": "#333536",
+                  "primary-fixed": "#9cf0ff",
+                  "secondary-fixed-dim": "#98d0da",
+                  "error-container": "#93000a",
+                  "on-secondary": "#00363d",
+                  "secondary-container": "#11505a",
+                  "inverse-on-surface": "#2f3132",
+                  "surface-container-high": "#282a2b",
+                  "on-surface": "#e2e2e3",
+                  "secondary": "#98d0da",
+                  "on-error": "#690005",
+                  "on-primary-fixed-variant": "#004f58",
+                  "primary-fixed-dim": "#00daf3",
+                  "tertiary": "#ffeac0",
+                  "on-primary": "#00363d",
+                  "surface-container-low": "#1a1c1d",
+                  "surface-tint": "#00daf3",
+                  "on-surface-variant": "#bac9cc",
+                  "on-secondary-fixed": "#001f24",
+                  "on-tertiary-fixed-variant": "#594400",
+                  "secondary-fixed": "#b3ecf7",
+                  "background": "#121415",
+                  "on-secondary-container": "#8ac1cc",
+                  "surface-dim": "#121415",
+                  "inverse-surface": "#e2e2e3",
+                  "on-tertiary": "#3e2e00",
+                  "surface-variant": "#333536",
+                  "primary": "#c3f5ff",
+                  "on-secondary-fixed-variant": "#0d4e57",
+                  "outline-variant": "#3b494c",
+                  "on-primary-fixed": "#001f24",
+                  "tertiary-fixed-dim": "#f3bf26",
+                  "surface-bright": "#38393a",
+                  "on-tertiary-container": "#6f5500",
+                  "primary-container": "#00e5ff",
+                  "surface": "#121415",
+                  "inverse-primary": "#006875",
+                  "surface-container": "#1e2021",
+                  "tertiary-fixed": "#ffdf96",
+                  "on-tertiary-fixed": "#251a00"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Space Grotesk"],
+                  "body": ["Space Grotesk"],
+                  "label": ["Space Grotesk"]
+          }
+        },
+      }
+    }
+  </script>
+<style>
+    body { font-family: 'Space Grotesk', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      background: rgba(40, 42, 43, 0.6);
+      backdrop-filter: blur(20px);
+    }
+    .monospaced-grid {
+      display: grid;
+      grid-template-columns: 48px 1fr auto 1fr 120px;
+      align-items: center;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-[#121415] border-b-0">
+<div class="text-xl font-bold tracking-tighter text-[#00E5FF]">NEON CONVERT</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-zinc-500 hover:text-cyan-300 transition-colors cursor-pointer active:opacity-70" href="#">Dönüştürücü</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-[#00E5FF] border-b-2 border-[#00E5FF] pb-1 cursor-pointer active:opacity-70" href="#">Geçmiş</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-zinc-500 hover:text-cyan-300 transition-colors cursor-pointer active:opacity-70" href="#">Ayarlar</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00E5FF] cursor-pointer">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#1a1c1d] border-r border-zinc-800/15 hidden lg:flex flex-col pt-8">
+<div class="px-6 mb-8">
+<h2 class="text-[#00E5FF] font-black text-xs uppercase tracking-widest">Kategoriler</h2>
+<p class="text-zinc-500 text-[10px] uppercase font-bold tracking-tighter">Laboratuvar Modu</p>
+</div>
+<nav class="flex flex-col">
+<div class="flex items-center gap-4 px-6 py-4 text-zinc-400 hover:bg-[#333536] hover:text-white transition-all cursor-pointer duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+<span>Uzunluk</span>
+</div>
+<div class="flex items-center gap-4 px-6 py-4 text-zinc-400 hover:bg-[#333536] hover:text-white transition-all cursor-pointer duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+<span>Sıcaklık</span>
+</div>
+<div class="flex items-center gap-4 px-6 py-4 text-zinc-400 hover:bg-[#333536] hover:text-white transition-all cursor-pointer duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm">
+<span class="material-symbols-outlined" data-icon="scale">scale</span>
+<span>Ağırlık</span>
+</div>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:ml-64 pt-24 px-6 pb-12">
+<div class="max-w-5xl mx-auto">
+<!-- History Header Section -->
+<section class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-on-surface mb-2">VERİ GEÇMİŞİ</h1>
+<p class="text-on-surface-variant text-sm font-light flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>
+            SİSTEM GÜNLÜĞÜ: SON 10 İŞLEM KAYDEDİLDİ
+          </p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:bg-white transition-colors duration-200">
+<span class="material-symbols-outlined text-sm" data-icon="delete_sweep">delete_sweep</span>
+          Geçmişi Temizle
+        </button>
+</section>
+<!-- History List: Laboratory Style -->
+<div class="space-y-1">
+<!-- List Header (Technical labels) -->
+<div class="monospaced-grid px-6 py-2 text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.1em] border-b border-outline-variant/15 opacity-50">
+<div>Tip</div>
+<div class="pl-4">Giriş Verisi</div>
+<div class="text-center">Vektör</div>
+<div class="pl-4">Çıkış Verisi</div>
+<div class="text-right">Zaman Damgası</div>
+</div>
+<!-- Entry 1 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="straighten">straighten</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">1250</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Metre</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">1.25</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Kilometre</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            08:42:15<br/>24/05/2024
+          </div>
+</div>
+<!-- Entry 2 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="thermostat">thermostat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">32</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Celsius</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">89.6</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Fahrenheit</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            08:39:02<br/>24/05/2024
+          </div>
+</div>
+<!-- Entry 3 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="scale">scale</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">75.5</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Kilogram</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">166.45</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Libre</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            08:15:44<br/>24/05/2024
+          </div>
+</div>
+<!-- Entry 4 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="speed">speed</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">120</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">KM/S</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">74.56</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">MPH</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            07:55:12<br/>24/05/2024
+          </div>
+</div>
+<!-- Entry 5 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="database">database</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">1</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Terabayt</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">1024</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Gigabayt</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            07:22:19<br/>24/05/2024
+          </div>
+</div>
+<!-- Entry 6 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="straighten">straighten</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">5.9</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">İnç</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">15</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Santimetre</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            23/05/2024<br/>23:14:00
+          </div>
+</div>
+<!-- Entry 7 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="water_drop">water_drop</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">500</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Mililitre</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">0.5</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Litre</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            23/05/2024<br/>21:05:32
+          </div>
+</div>
+<!-- Entry 8 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="thermostat">thermostat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">100</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Celsius</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">212</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Fahrenheit</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            23/05/2024<br/>18:44:11
+          </div>
+</div>
+<!-- Entry 9 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="schedule">schedule</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">3600</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Saniye</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">1</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Saat</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            23/05/2024<br/>14:30:00
+          </div>
+</div>
+<!-- Entry 10 -->
+<div class="monospaced-grid px-6 py-6 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-center w-10 h-10 bg-surface-container-highest border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="square_foot">square_foot</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-on-surface">10</span>
+<span class="text-xs uppercase text-on-surface-variant ml-2 font-medium tracking-wider">Metrekare</span>
+</div>
+<div class="text-primary-container flex justify-center">
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</div>
+<div class="pl-4">
+<span class="text-2xl font-bold text-primary-container">107.64</span>
+<span class="text-xs uppercase text-primary-container/80 ml-2 font-medium tracking-wider">Fitkare</span>
+</div>
+<div class="text-right text-[11px] font-mono text-on-surface-variant/60 uppercase">
+            23/05/2024<br/>12:10:45
+          </div>
+</div>
+</div>
+<!-- Footer Meta Data -->
+<footer class="mt-12 flex justify-between items-center px-4 py-8 border-t border-outline-variant/10">
+<div class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">
+          Neon Convert v4.2 // Calibration: Stable
+        </div>
+<div class="flex gap-4">
+<div class="bg-surface-container-high px-3 py-1 text-[10px] font-bold text-primary-container border border-primary-container/20">
+            LOGS: ENABLED
+          </div>
+<div class="bg-surface-container-high px-3 py-1 text-[10px] font-bold text-zinc-500 border border-zinc-800">
+            AUTO-SYNC: ON
+          </div>
+</div>
+</footer>
+</div>
+</main>
+<!-- Mobile Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 w-full glass-panel flex justify-around items-center py-4 px-6 z-50 border-t-0">
+<div class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Çevir</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#00E5FF] cursor-pointer">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Geçmiş</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Ayar</span>
+</div>
+</div>
+</body></html>

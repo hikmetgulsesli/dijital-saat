@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON CONVERT - Geçmiş</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0c0e0f",
+                    "on-primary-container": "#00626e",
+                    "tertiary-container": "#fec931",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "outline": "#849396",
+                    "on-background": "#e2e2e3",
+                    "surface-container-highest": "#333536",
+                    "primary-fixed": "#9cf0ff",
+                    "secondary-fixed-dim": "#98d0da",
+                    "error-container": "#93000a",
+                    "on-secondary": "#00363d",
+                    "secondary-container": "#11505a",
+                    "inverse-on-surface": "#2f3132",
+                    "surface-container-high": "#282a2b",
+                    "on-surface": "#e2e2e3",
+                    "secondary": "#98d0da",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#004f58",
+                    "primary-fixed-dim": "#00daf3",
+                    "tertiary": "#ffeac0",
+                    "on-primary": "#00363d",
+                    "surface-container-low": "#1a1c1d",
+                    "surface-tint": "#00daf3",
+                    "on-surface-variant": "#bac9cc",
+                    "on-secondary-fixed": "#001f24",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "secondary-fixed": "#b3ecf7",
+                    "background": "#121415",
+                    "on-secondary-container": "#8ac1cc",
+                    "surface-dim": "#121415",
+                    "inverse-surface": "#e2e2e3",
+                    "on-tertiary": "#3e2e00",
+                    "surface-variant": "#333536",
+                    "primary": "#c3f5ff",
+                    "on-secondary-fixed-variant": "#0d4e57",
+                    "outline-variant": "#3b494c",
+                    "on-primary-fixed": "#001f24",
+                    "tertiary-fixed-dim": "#f3bf26",
+                    "surface-bright": "#38393a",
+                    "on-tertiary-container": "#6f5500",
+                    "primary-container": "#00e5ff",
+                    "surface": "#121415",
+                    "inverse-primary": "#006875",
+                    "surface-container": "#1e2021",
+                    "tertiary-fixed": "#ffdf96",
+                    "on-tertiary-fixed": "#251a00"
+            },
+            "borderRadius": {
+                    "none": "0px",
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-grid {
+            background-image: linear-gradient(to right, rgba(132, 147, 150, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(132, 147, 150, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .neon-glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-[#121415] border-b-0">
+<div class="text-xl font-bold tracking-tighter text-[#00E5FF] font-headline uppercase">NEON CONVERT</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs transition-colors cursor-pointer text-zinc-500 hover:text-cyan-300" href="#">Dönüştürücü</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs transition-colors cursor-pointer text-[#00E5FF] border-b-2 border-[#00E5FF] pb-1 hover:text-cyan-300" href="#">Geçmiş</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs transition-colors cursor-pointer text-zinc-500 hover:text-cyan-300" href="#">Ayarlar</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00E5FF] cursor-pointer active:opacity-70" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<div class="flex h-screen pt-16">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#1a1c1d] border-r border-zinc-800/15 flex flex-col pt-8 hidden lg:flex">
+<div class="px-6 mb-8">
+<h2 class="text-[#00E5FF] font-['Space_Grotesk'] font-black uppercase text-xs tracking-widest">Kategoriler</h2>
+<p class="text-zinc-500 text-[10px] uppercase tracking-tighter mt-1">Laboratuvar Modu</p>
+</div>
+<nav class="flex flex-col">
+<a class="group flex items-center px-6 py-4 text-zinc-400 font-['Space_Grotesk'] font-medium text-sm transition-all duration-200 hover:bg-[#333536] hover:text-white" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="straighten">straighten</span>
+                    Uzunluk
+                </a>
+<a class="group flex items-center px-6 py-4 text-zinc-400 font-['Space_Grotesk'] font-medium text-sm transition-all duration-200 hover:bg-[#333536] hover:text-white" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="thermostat">thermostat</span>
+                    Sıcaklık
+                </a>
+<a class="group flex items-center px-6 py-4 text-zinc-400 font-['Space_Grotesk'] font-medium text-sm transition-all duration-200 hover:bg-[#333536] hover:text-white" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="scale">scale</span>
+                    Ağırlık
+                </a>
+</nav>
+<div class="mt-auto p-6 border-t border-zinc-800/20">
+<div class="bg-surface-container-high p-4 border border-outline-variant/10">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Cihaz Durumu</p>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 bg-[#00E5FF] shadow-[0_0_5px_#00E5FF]"></div>
+<span class="text-xs font-mono text-[#00E5FF]">SİSTEM AKTİF</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 lg:ml-64 relative bg-background technical-grid flex items-center justify-center p-6">
+<!-- Technical Archive Empty State Container -->
+<div class="max-w-2xl w-full text-center relative">
+<!-- Background Decorative Schematics -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 opacity-5 pointer-events-none">
+<svg class="w-full h-full stroke-primary fill-none stroke-[0.2]" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="40"></circle>
+<circle cx="50" cy="50" r="30"></circle>
+<path d="M50 10 L50 90 M10 50 L90 50"></path>
+<path d="M22 22 L78 78 M22 78 L78 22"></path>
+</svg>
+</div>
+<!-- Central Illustration / Icon -->
+<div class="relative inline-block mb-12">
+<div class="absolute inset-0 blur-3xl bg-primary-container/10"></div>
+<div class="relative bg-surface-container-low p-8 border border-outline-variant/20 inline-flex items-center justify-center">
+<!-- Simulated Digital Caliper / Archive Device -->
+<div class="w-32 h-32 flex items-center justify-center border-2 border-dashed border-outline-variant/40 relative">
+<span class="material-symbols-outlined text-6xl text-primary-container/40" data-icon="inventory_2">inventory_2</span>
+<div class="absolute top-0 right-0 p-2 text-[10px] font-mono text-outline-variant">ERR_404_NULL</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+<div class="w-1 h-1 bg-zinc-700"></div>
+<div class="w-1 h-1 bg-zinc-700"></div>
+<div class="w-1 h-1 bg-zinc-700"></div>
+</div>
+</div>
+</div>
+<!-- Technical Callouts -->
+<div class="absolute -right-24 top-0 hidden md:block">
+<div class="flex items-center gap-3">
+<div class="h-px w-12 bg-outline-variant/30"></div>
+<span class="text-[10px] font-mono text-zinc-600 uppercase">Veri Havuzu: Boş</span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="relative space-y-6">
+<h1 class="text-3xl md:text-4xl font-black text-on-surface uppercase tracking-tight font-headline">
+                        Henüz bir geçmişiniz yok.
+                    </h1>
+<p class="max-w-md mx-auto text-on-surface-variant text-sm md:text-base leading-relaxed opacity-80">
+                        Dönüştürme yaparak başlayın! Tüm çevrimleriniz burada <span class="text-primary-fixed-dim">teknolojik bir arşivde</span> saklanacak.
+                    </p>
+</div>
+<!-- CTA -->
+<div class="mt-12">
+<button class="group relative px-10 py-4 bg-primary-container text-on-primary-container font-bold uppercase tracking-widest text-sm transition-all hover:bg-surface-tint active:scale-[0.98]">
+<span class="relative z-10">İlk Dönüşümünü Yap</span>
+<!-- Corner Accents -->
+<div class="absolute -top-1 -left-1 w-2 h-2 border-t-2 border-l-2 border-primary-container group-hover:border-white"></div>
+<div class="absolute -bottom-1 -right-1 w-2 h-2 border-b-2 border-r-2 border-primary-container group-hover:border-white"></div>
+</button>
+</div>
+<!-- Data Metadata Display (Laboratory feel) -->
+<div class="mt-24 grid grid-cols-3 gap-1 max-w-sm mx-auto">
+<div class="bg-surface-container-low p-2 border border-outline-variant/5">
+<div class="text-[9px] text-zinc-500 uppercase">Log Kaydı</div>
+<div class="text-xs font-mono">0.00ms</div>
+</div>
+<div class="bg-surface-container-low p-2 border border-outline-variant/5">
+<div class="text-[9px] text-zinc-500 uppercase">Kapasite</div>
+<div class="text-xs font-mono">∞ GB</div>
+</div>
+<div class="bg-surface-container-low p-2 border border-outline-variant/5">
+<div class="text-[9px] text-zinc-500 uppercase">Sunucu</div>
+<div class="text-xs font-mono">LOCAL</div>
+</div>
+</div>
+</div>
+<!-- Absolute Positioned Technical Elements -->
+<div class="absolute bottom-8 left-8 hidden lg:block">
+<div class="flex flex-col gap-1">
+<div class="text-[10px] font-mono text-outline-variant">SYSTEM_READY</div>
+<div class="text-[10px] font-mono text-outline-variant">ARCHIVE_SYNC: WAITING</div>
+<div class="w-32 h-1 bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-4 bg-primary-container/40"></div>
+</div>
+</div>
+</div>
+<div class="absolute top-8 right-8 hidden lg:block">
+<div class="text-[10px] font-mono text-zinc-700 text-right">
+                    VER: 2.0.4<br/>
+                    LOC: IST-LAB-01
+                </div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#1a1c1d] flex justify-around items-center p-4 z-50">
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+<span class="text-[10px] uppercase font-bold">Dönüştür</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#00E5FF]">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] uppercase font-bold">Geçmiş</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] uppercase font-bold">Ayarlar</span>
+</button>
+</nav>
+</body></html>

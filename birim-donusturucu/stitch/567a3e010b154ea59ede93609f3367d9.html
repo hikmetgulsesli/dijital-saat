@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON CONVERT - Hata</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0c0e0f",
+                    "on-primary-container": "#00626e",
+                    "tertiary-container": "#fec931",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "outline": "#849396",
+                    "on-background": "#e2e2e3",
+                    "surface-container-highest": "#333536",
+                    "primary-fixed": "#9cf0ff",
+                    "secondary-fixed-dim": "#98d0da",
+                    "error-container": "#93000a",
+                    "on-secondary": "#00363d",
+                    "secondary-container": "#11505a",
+                    "inverse-on-surface": "#2f3132",
+                    "surface-container-high": "#282a2b",
+                    "on-surface": "#e2e2e3",
+                    "secondary": "#98d0da",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#004f58",
+                    "primary-fixed-dim": "#00daf3",
+                    "tertiary": "#ffeac0",
+                    "on-primary": "#00363d",
+                    "surface-container-low": "#1a1c1d",
+                    "surface-tint": "#00daf3",
+                    "on-surface-variant": "#bac9cc",
+                    "on-secondary-fixed": "#001f24",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "secondary-fixed": "#b3ecf7",
+                    "background": "#121415",
+                    "on-secondary-container": "#8ac1cc",
+                    "surface-dim": "#121415",
+                    "inverse-surface": "#e2e2e3",
+                    "on-tertiary": "#3e2e00",
+                    "surface-variant": "#333536",
+                    "primary": "#c3f5ff",
+                    "on-secondary-fixed-variant": "#0d4e57",
+                    "outline-variant": "#3b494c",
+                    "on-primary-fixed": "#001f24",
+                    "tertiary-fixed-dim": "#f3bf26",
+                    "surface-bright": "#38393a",
+                    "on-tertiary-container": "#6f5500",
+                    "primary-container": "#00e5ff",
+                    "surface": "#121415",
+                    "inverse-primary": "#006875",
+                    "surface-container": "#1e2021",
+                    "tertiary-fixed": "#ffdf96",
+                    "on-tertiary-fixed": "#251a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#121415] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="text-xl font-bold tracking-tighter text-[#00E5FF]">NEON CONVERT</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-[#00E5FF] border-b-2 border-[#00E5FF] pb-1 cursor-pointer active:opacity-70 transition-colors" href="#">Dönüştürücü</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-zinc-500 hover:text-cyan-300 transition-colors cursor-pointer active:opacity-70" href="#">Geçmiş</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs text-zinc-500 hover:text-cyan-300 transition-colors cursor-pointer active:opacity-70" href="#">Ayarlar</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00E5FF] cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-16 md:pl-64 flex flex-col">
+<!-- Error Focus Area -->
+<div class="flex-grow flex items-center justify-center p-6 sm:p-12">
+<div class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Input Module (The Probe) -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 shadow-[0_0_50px_-12px_rgba(244,67,54,0.1)] border-l-2 border-error">
+<div class="flex justify-between items-center mb-8">
+<span class="text-xs uppercase tracking-[0.1em] text-on-surface-variant font-medium">Giriş Parametresi</span>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold">METRİK</span>
+<span class="px-3 py-1 bg-secondary-container text-primary text-[10px] font-bold">MANUEL</span>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-xs text-error mb-2 font-medium uppercase tracking-wider">Değer</label>
+<div class="flex items-center border-b-2 border-error shadow-[0_4px_20px_-10px_rgba(255,180,171,0.5)] transition-all">
+<input class="bg-transparent border-none w-full py-4 text-4xl md:text-6xl font-bold focus:ring-0 text-on-surface outline-none" spellcheck="false" type="text" value="abc"/>
+<span class="material-symbols-outlined text-error text-3xl animate-pulse" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<p class="mt-4 text-error font-medium text-sm flex items-center gap-2">
+                            Lütfen geçerli bir sayı giriniz.
+                        </p>
+</div>
+<div class="mt-12 flex flex-wrap gap-4">
+<button class="bg-surface-container-highest text-on-surface-variant px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-zinc-700 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="refresh">refresh</span>
+                            Temizle
+                        </button>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary-fixed transition-all shadow-[0_0_15px_rgba(0,229,255,0.3)]">
+                            Tekrar Dene
+                        </button>
+</div>
+</div>
+<!-- Result Area (Display) -->
+<div class="lg:col-span-5 flex flex-col h-full gap-6">
+<div class="bg-surface-container-highest p-8 flex-grow flex flex-col justify-center border-t-4 border-error/30 relative overflow-hidden">
+<!-- Background Texture Pattern -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffb4ab_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-error font-bold mb-2">Sistem Çıktısı</span>
+<div class="text-4xl md:text-5xl font-black text-error leading-tight tracking-tighter">
+                            GEÇERSİZ GİRİŞ
+                        </div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-center text-[10px] font-mono text-on-surface-variant/60 uppercase">
+<span>Hata Kodu</span>
+<span class="text-error">ERR_402_INVALID_INPUT</span>
+</div>
+</div>
+</div>
+<!-- Metadata Module -->
+<div class="bg-surface-container-low p-6 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="info">info</span>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wide text-on-surface">Öneri</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mt-1">
+                                    Sistem yalnızca numerik karakterleri (0-9) ve ondalık ayırıcıları kabul etmektedir. Lütfen harf veya özel karakter kullanmadığınızdan emin olun.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar -->
+<aside class="hidden md:flex bg-[#1a1c1d] fixed left-0 top-16 h-[calc(100vh-64px)] w-64 flex-col pt-8 border-r border-zinc-800/15 z-40">
+<div class="px-6 mb-10">
+<h2 class="text-[#00E5FF] font-black font-['Space_Grotesk'] text-lg">Kategoriler</h2>
+<p class="text-zinc-500 text-[10px] uppercase tracking-widest">Laboratuvar Modu</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-4 bg-[#282a2b] text-[#00E5FF] border-l-4 border-[#00E5FF] transition-all duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+                Uzunluk
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-zinc-400 hover:bg-[#333536] hover:text-white transition-all duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+                Sıcaklık
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-zinc-400 hover:bg-[#333536] hover:text-white transition-all duration-200 ease-in-out font-['Space_Grotesk'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="scale">scale</span>
+                Ağırlık
+            </a>
+</nav>
+<div class="mt-auto p-6 border-t border-outline-variant/10">
+<div class="p-4 bg-surface-container-highest/30">
+<p class="text-[10px] text-zinc-500 uppercase tracking-tighter mb-2">Sistem Durumu</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-error animate-pulse"></div>
+<span class="text-[10px] font-bold text-error uppercase">Giriş Hatası</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Mobile Bottom Navigation (Only visible on small screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#1a1c1d] flex justify-around items-center py-3 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center gap-1 text-[#00E5FF]" href="#">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+<span class="text-[10px] uppercase font-bold">Uzunluk</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500" href="#">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+<span class="text-[10px] uppercase font-bold">Isı</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500" href="#">
+<span class="material-symbols-outlined" data-icon="scale">scale</span>
+<span class="text-[10px] uppercase font-bold">Ağırlık</span>
+</a>
+</nav>
+</body></html>

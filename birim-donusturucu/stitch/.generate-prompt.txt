@@ -1,0 +1,52 @@
+# birim-donusturucu
+## 1 Genel
+Proje: birim-donusturucu Platform: Web SPA. Uzunluk sicaklik agirlik birimleri arasinda anlik donusum.
+## 2 Ozellikler
+1 Kategori Sekmeleri Uzunluk Sicaklik Agirlik
+2 Kaynak Hedef Dropdown Birim secimi
+3 Deger Girisi Anlik sonuc
+4 Degerleri Degistir Swap
+5 Gecmis Panel Son 10 donusum localStorage
+6 Tema Toggle Karanlik Aydinlik
+## 3 Birimler
+Uzunluk: metre(m) kilometre(km) santimetre(cm) mil(mi) feet(ft) inç(in)
+Sicaklik: Celsius(C) Fahrenheit(F) Kelvin(K)
+Agirlik: gram(g) kilogram(kg) pound(lb) ons(oz)
+## 4 Donusum Formulleri
+Sicaklik: C=(F-32)*5/9 K=C+273.15
+Uzunluk: baz metre carpanlar: km=1000 cm=0.01 mi=1609.344 ft=0.3048 in=0.0254
+Agirlik: baz gram carpanlar: kg=1000 lb=453.592 oz=28.3495
+Precision: 4 ondalik basamak
+## 5 Teknik
+React 18.3 TypeScript Vite 5 Tailwind CSS 3 @testing-library/react Vitest
+## 6 Dosya Yapisi
+src/types.ts Category Unit ConversionHistory Settings
+src/utils/converter.ts convert() formatNumber()
+src/hooks/useTheme.ts tema state localStorage
+src/hooks/useHistory.ts donusum gecmisi localStorage
+src/components/CategoryTabs.tsx kategori sekmeler
+src/components/ConversionForm.tsx input dropdown swap
+src/components/ResultDisplay.tsx sonuc gosterimi
+src/components/HistoryPanel.tsx gecmis listesi
+src/components/ThemeToggle.tsx tema butonu
+src/App.tsx tum componentleri birlestirir
+src/index.css Tailwind base design tokens
+## 7 Ekranlar
+| # Ekran Tur Aciklama |
+|---|---|
+| 1 Ana Sayfa main-view Birim donusturme arayuzu |
+| 2 Gecmis Panel history-panel Son 10 donusum |
+| 3 Bos Durum empty-state Henuz donusum yapilmadi |
+| 4 Hata Durumu error-state Gecersiz input kirmizi border |
+| 5 Tema Toggle settings Karanlik aydinlik |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.
