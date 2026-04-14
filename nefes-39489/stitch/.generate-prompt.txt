@@ -1,0 +1,260 @@
+# Nefes-39489: Nefes Egzersizi Uygulaması — PRD
+
+## 1. Proje Özeti
+
+**Proje Adı:** Nefes-39489  
+**Platform:** Web (React 18 + Vite + Tailwind CSS)  
+**Proje Türü:** Meditasyon / Wellness SPA  
+**Özet:** Kullanıcıların farklı nefes tekniklerini (4-4-4, 4-7-8) uygulayarak gevşeme ve odaklanma sağlayabilecekleri animasyonlu, sesli bir nefes egzersizi uygulaması.  
+
+**Hedef Kitle:** 
+- Stres yönetimi ve gevşeme arayan bireyler
+- Meditasyon新手
+- Uyku kalitesini artırmak isteyenler
+- Odaklanma sorunu yaşayan profesyoneller
+
+---
+
+## 2. Fonksiyonel Gereksinimler
+
+### 2.1 Nefes Teknikleri
+
+| Teknik | Açıklama | Döngü |
+|--------|----------|-------|
+| **4-4-4 (Kutu Nefesi)** | Eşit sürede nefes al → tut → ver | 4sn × 3 = 12sn |
+| **4-7-8 (Rahatlatıcı Nefes)** | 4sn nefes al → 7sn tut → 8sn ver | 4+7+8 = 19sn |
+
+### 2.2 Ana Ekran Bileşenleri
+
+1. **Animasyonlu Çember**
+   - Genişleyen/küçülen dairesel animasyon
+   - Nefes_al = ölçek 1.0 → 1.8 (büyüme)
+   - Nefes_tut = ölçek 1.8 sabit
+   - Nefes_ver = ölçek 1.8 → 1.0 (küçülme)
+   - Animasyon süresi CSS transitions ile kesin kontrol
+
+2. **Teknik Seçici**
+   - İki seçenek: "4-4-4 Kutu Nefesi" ve "4-7-8 Rahatlatıcı Nefes"
+   - Aktif seçim görsel olarak vurgulanır (border + glow)
+   - Seçim değiştiğinde animasyon ritmi güncellenir
+
+3. **Zamanlayıcı (Timer)**
+   - Kalan süreyi dakika:saniye formatında gösterir (MM:SS)
+   - Büyük, okunaklı font
+   - Geri sayım başladığında görünür
+
+4. **Seans Süresi Seçici**
+   - Üç seçenek: 3 dakika, 5 dakika, 10 dakika
+   - Düğme grubu (button group) olarak gösterilir
+   - Varsayılan: 5 dakika
+
+5. **Ses Efektleri**
+   - Nefes_al sesi: Yumuşak, kısa bir tones (~200ms)
+   - Nefes_ver sesi: Hafif, uzun bir tones (~300ms)
+   - Ses açık/kapalı toggle butonu
+   - Web Audio API ile oynatılır (base64 inline veya harici .mp3/.wav)
+
+6. **Kontrol Butonları**
+   - **Başlat:** Seansı başlatır, buton "Duraklat"a döner
+   - **Duraklat:** Seansı geçici olarak durdurur, "Devam Et"e döner
+   - **Sıfırla:** Seansı baştan başlatır
+   - Butonlar arasında net görsel hiyerarşi (Başlat > Duraklat > Sıfırla)
+
+7. **İlerleme Göstergesi**
+   - Tamamlanan nefes döngüsü sayısı
+   - "X. döngü" formatında
+   - Toplam hedef döngü hesaplaması: toplam_süre / döngü_süresi
+
+### 2.3 Seans Tamamlandığında
+
+- Animasyon durur, çember nötr pozisyona döner
+- "Seans Tamamlandı" mesajı gösterilir
+- Sesli bildirim (opsiyonel)
+- "Tekrar Başlat" ve "Ayarlara Dön" butonları
+
+### 2.4 Ayarlar Paneli (Overlay/Modal)
+
+- **Ses efekti:** Açık / Kapalı
+- **Teknik varsayılanı:** 4-4-4 veya 4-7-8
+- **Seans süresi varsayılanı:** 3/5/10 dakika
+- Ayarlar localStorage'da saklanır
+
+---
+
+## 3. Teknik Gereksinimler
+
+### 3.1 Teknoloji Stack
+
+- **Framework:** React 18 (functional components + hooks)
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **State Yönetimi:** React useState + useEffect (basit proje, Context yeterli)
+- **Ses:** Web Audio API
+- **Veri Saklama:** localStorage (ayarlar için)
+- **Paket Yönetimi:** npm
+
+### 3.2 Proje Yapısı
+
+```
+src/
+├── components/
+│   ├── BreathingCircle.tsx      # Animasyonlu çember
+│   ├── TechniqueSelector.tsx    # 4-4-4 / 4-7-8 seçici
+│   ├── DurationSelector.tsx      # 3/5/10 dak seçici
+│   ├── Timer.tsx                # Geri sayım görüntüsü
+│   ├── Controls.tsx             # Başlat/Duraklat/Sıfırla
+│   ├── SessionComplete.tsx      # Tamamlanma ekranı
+│   └── Settings.tsx             # Ayarlar modal
+├── hooks/
+│   ├── useBreathingCycle.ts     # Nefes döngüsü state'i
+│   ├── useTimer.ts              # Geri sayım mantığı
+│   └── useAudio.ts              # Ses efektleri
+├── utils/
+│   └── constants.ts             # Teknik süreleri, palet
+├── App.tsx
+├── main.tsx
+└── index.css                     # Tailwind + custom animations
+```
+
+### 3.3 Animasyon Detayları
+
+- **CSS Transitions:** ease-in-out, `transform: scale()`
+- **İterasyon:** requestAnimationFrame yerine CSS transition + JS setTimeout
+- **Döngü yönetimi:** useEffect + setTimeout zinciri
+
+### 3.4 Renk Paleti (Sakinleştirici)
+
+```
+Primary:     #6366F1  (Indigo — sakin, derin)
+Secondary:   #8B5CF6  (Violet — rahatlatıcı)
+Accent:      #A78BFA  (Light violet)
+Background:  #0F172A  (Koyu lacivert — gece modu hissi)
+Surface:     #1E293B  (Slate-800)
+Text:        #F1F5F9  (Slate-100)
+Success:     #10B981  (Emerald)
+```
+
+---
+
+## 4. UI/UX Gereksinimleri
+
+### 4.1 Genel Tasarım İlkeleri
+
+- Minimalist, dikkat dağıtmayan arayüz
+- Koyu tema (gece kullanımı için ideal)
+- Büyük dokunma alanları (mobil uyumlu)
+- Anlık görsel geribildirim (animasyon)
+
+### 4.2 Responsive Tasarım
+
+- Mobile-first yaklaşım
+- Çember ekranın %40-60'ını kaplar
+- Kontrol butonları alt kısımda sabit
+- Minimum genişlik: 320px
+
+### 4.3 Animasyon UX
+
+- Nefes_al: Çember büyür + "NEFES AL" yazısı
+- Nefes_tut: Çember sabit + "TUT" yazısı  
+- Nefes_ver: Çember küçülür + "NEFES VER" yazısı
+- Geçişler yumuşak (ease-in-out, ~4-8 saniye)
+
+### 4.4 Erişilebilirlik
+
+- Klavye navigasyonu
+- Ses kapalıyken görsel ipuçları yeterli
+- Yeterli kontrast oranı
+- prefers-reduced-motion desteği
+
+---
+
+## 5. Non-Fonksiyonel Gereksinimler
+
+### 5.1 Performans
+
+- İlk yükleme < 2 saniye
+- Animasyon 60fps
+- Lighthouse performans skoru > 90
+
+### 5.2 Tarayıcı Desteği
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+### 5.3 Progresif Web App (Opsiyonel)
+
+- Service Worker ile offline çalışabilirlik
+- PWA manifest
+
+---
+
+## 6. Oyun Durumu (State Machine)
+
+Uygulama aşağıdaki durumlardan birinde olacaktır:
+
+| Durum | Açıklama |
+|-------|----------|
+| `IDLE` | Başlangıç, ayarlar yapılabilir, başlatmaya hazır |
+| `RUNNING` | Seans aktif, animasyon çalışıyor |
+| `PAUSED` | Seans duraklatıldı |
+| `COMPLETE` | Seans tamamlandı |
+
+**Geçişler:**
+- IDLE → RUNNING (Başlat)
+- RUNNING → PAUSED (Duraklat)
+- PAUSED → RUNNING (Devam Et)
+- PAUSED → IDLE (Sıfırla)
+- RUNNING → COMPLETE (Süre dolduğunda)
+- COMPLETE → IDLE (Ayarlara Dön veya Tekrar Başlat)
+
+---
+
+## 7. Ses Dosyası Notları
+
+Ses efektleri için iki seçenek:
+1. **Harici dosyalar:** `public/sounds/breath-in.mp3`, `public/sounds/breath-out.mp3`
+2. **Web Audio API ile sentetik:** OscillatorNode ile yumuşak tones
+
+Önerilen: Harici .mp3 dosyaları (daha doğal his).
+
+---
+
+## 8. Başarı Kriterleri
+
+- [ ] 4-4-4 ve 4-7-8 teknikleri doğru sürelerle çalışır
+- [ ] Animasyon pürüzsüz ve senkronize
+- [ ] Ses efektleri doğru zamanda tetiklenir
+- [ ] Zamanlayıcı doğru çalışır
+- [ ] Tüm seans süreleri (3/5/10 dk) işlevsel
+- [ ] Ayarlar localStorage'da kalıcı
+- [ ] Mobilde responsive görünür
+- [ ] Hiçbir hata konsolunda hata yok
+
+---
+
+## Ekranlar (Screens)
+
+| # | Ekran Adı | Tür | Açıklama |
+|---|-----------|-----|----------|
+| 1 | Ana Egzersiz Ekranı | main-view | Animasyonlu çember, teknik seçici, süre seçici, zamanlayıcı, kontrol butonları |
+| 2 | Seans Tamamlandı | completion-view | Tebrik mesajı, döngü sayısı, tekrar başlatma seçenekleri |
+| 3 | Ayarlar | modal | Ses, varsayılan teknik, varsayılan süre ayarları |
+| 4 | Boş Durum (Yükleme) | loading | İlk yükleme sırasında animasyon |
+
+---
+
+**Ekran Sayısı:** 4  
+**DB Gereksinimi:** none
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

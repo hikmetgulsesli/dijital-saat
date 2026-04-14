@@ -1,0 +1,1067 @@
+{
+  "generatedAt": "2026-04-14T02:19:38.369Z",
+  "screenCount": 4,
+  "screens": {
+    "19b118d2ff5a443e8b370fe31892e4e3": {
+      "screenId": "19b118d2ff5a443e8b370fe31892e4e3",
+      "materialSymbolsRequired": false,
+      "sections": [
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "relative",
+            "z-10",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "px-6",
+            "text-center",
+            "max-w-lg",
+            "w-full"
+          ],
+          "childCount": 10
+        },
+        {
+          "tag": "footer",
+          "layout": "absolute",
+          "classes": [
+            "fixed",
+            "bottom-12",
+            "z-10",
+            "opacity-30"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAV7CiXE7moKRH8gtDSL3uzMcDSpvowDHG93lwnZHxM38KI1TSTjDLFeBR1qcIDVZ3FJu9OegDFnC25tuQJ2ColTY8CDwh96TRBTvZ4HhxV8VLHgkRNWGCijCpUwmh47npGeKRwQSUAyr5tRfGUr6",
+          "alt": "Smooth deep indigo and violet organic fluid gradient with subtle grain texture and soft ethereal glowing particles"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-bright": "#31394d",
+        "on-tertiary-fixed-variant": "#4f319c",
+        "tertiary": "#cebdff",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#cebdff",
+        "inverse-surface": "#dae2fd",
+        "surface": "#0b1326",
+        "primary-container": "#8083ff",
+        "secondary": "#d0bcff",
+        "on-secondary-fixed-variant": "#5516be",
+        "error-container": "#93000a",
+        "surface-dim": "#0b1326",
+        "secondary-container": "#571bc1",
+        "tertiary-container": "#9b7fed",
+        "on-tertiary-container": "#31057e",
+        "on-tertiary-fixed": "#21005e",
+        "on-background": "#dae2fd",
+        "inverse-on-surface": "#283044",
+        "surface-container": "#171f33",
+        "on-surface-variant": "#c7c4d7",
+        "on-tertiary": "#381385",
+        "primary": "#c0c1ff",
+        "on-primary-fixed-variant": "#2f2ebe",
+        "on-surface": "#dae2fd",
+        "error": "#ffb4ab",
+        "primary-fixed-dim": "#c0c1ff",
+        "surface-container-low": "#131b2e",
+        "surface-container-lowest": "#060e20",
+        "tertiary-fixed": "#e8ddff",
+        "on-secondary-container": "#c4abff",
+        "on-primary-fixed": "#07006c",
+        "inverse-primary": "#494bd6",
+        "secondary-fixed-dim": "#d0bcff",
+        "on-primary": "#1000a9",
+        "outline": "#908fa0",
+        "background": "#0b1326",
+        "on-primary-container": "#0d0096",
+        "surface-container-highest": "#2d3449",
+        "outline-variant": "#464554",
+        "on-secondary-fixed": "#23005c",
+        "on-error-container": "#ffdad6",
+        "surface-tint": "#c0c1ff",
+        "primary-fixed": "#e1e0ff",
+        "surface-variant": "#2d3449",
+        "surface-container-high": "#222a3d",
+        "secondary-fixed": "#e9ddff",
+        "on-secondary": "#3c0091"
+      },
+      "fonts": [
+        "Manrope",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "tabBar": [],
+      "title": "Yükleme Ekranı"
+    },
+    "47c46f20bc584368bc49269271517d91": {
+      "screenId": "47c46f20bc584368bc49269271517d91",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "main",
+          "layout": "relative",
+          "classes": [
+            "relative",
+            "z-50",
+            "w-full",
+            "max-w-2xl",
+            "transform",
+            "transition-all",
+            "duration-300"
+          ],
+          "childCount": 30
+        }
+      ],
+      "buttons": [
+        {
+          "label": "close",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-white/5",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "close",
+          "action": "dismiss"
+        },
+        {
+          "label": "3 Dakika\n                                    check",
+          "classes": [
+            "w-full",
+            "text-left",
+            "px-4",
+            "py-3",
+            "rounded-xl",
+            "bg-primary/10",
+            "text-primary",
+            "font-medium",
+            "flex",
+            "justify-between",
+            "items-center",
+            "transition-all"
+          ],
+          "icon": "check",
+          "action": "click-action"
+        },
+        {
+          "label": "5 Dakika",
+          "classes": [
+            "w-full",
+            "text-left",
+            "px-4",
+            "py-3",
+            "rounded-xl",
+            "text-on-surface-variant",
+            "hover:bg-white/5",
+            "hover:text-on-surface",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "10 Dakika",
+          "classes": [
+            "w-full",
+            "text-left",
+            "px-4",
+            "py-3",
+            "rounded-xl",
+            "text-on-surface-variant",
+            "hover:bg-white/5",
+            "hover:text-on-surface",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "Vazgeç",
+          "classes": [
+            "px-8",
+            "py-3",
+            "rounded-full",
+            "font-medium",
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "hover:bg-white/5",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "Kaydet",
+          "classes": [
+            "px-10",
+            "py-3",
+            "rounded-full",
+            "font-headline",
+            "font-bold",
+            "text-on-primary",
+            "bg-gradient-to-br",
+            "from-primary",
+            "to-primary-container",
+            "shadow-lg",
+            "shadow-primary/20",
+            "hover:scale-[1.02]",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": null,
+          "action": "form-submit"
+        },
+        {
+          "label": "close",
+          "classes": [],
+          "icon": "close",
+          "action": "click-action"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "peer"
+          ]
+        },
+        {
+          "type": "radio",
+          "placeholder": "",
+          "name": "technique",
+          "classes": [
+            "hidden",
+            "peer"
+          ]
+        },
+        {
+          "type": "radio",
+          "placeholder": "",
+          "name": "technique",
+          "classes": [
+            "hidden",
+            "peer"
+          ]
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "close",
+        "volume_up",
+        "shutter_speed",
+        "check"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAz2g2QRFsTUhBswem-QOF0mKEB7IeBBubjnJILpekZ3asf0GB6zNpBqVx8WsH8i5xg4RMSxnVV2RjyhSYqSu_nIGt-5RR6WUxeaob56ayrIIJ-4-8HMkYxctpZyXZOwXZ-qTey5e8LC6RkmVqplK",
+          "alt": "Deep blue night sky with soft constellations and ethereal nebula wisps in calm dark atmosphere"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAr_a-ttnc39LH9RxD9OwMxzS5xWg0pAUWM5nJ9FOn6rou6VZhCdaojHMV8L4WLM1zsHLJc_5y6qlnA1zNWAn4Z52xJ7RvEy7hL75BkK_Td8u_yPv6Uo34RiSqBE2_4U72hwDANFpuc60cQTCnUKx",
+          "alt": "Abstract smooth flowing silk texture in deep indigo and lavender tones with soft cinematic lighting"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAlWEH4w1p_D3K60hSKPFAfbDkF10PpOuizDHZj7CKLs4E4QKOO6moROsS5VXF13PZOiWW9EqZt-Ek-hi87Se7eU99zAh9-KAjuWuT6U49-uRqH0NLdt2ownz6P5a6XXSk7DTki8T2ZspROeMk-oU",
+          "alt": "Blurred silhouette of person meditating in front of calm misty lake at dawn with cool blue tones"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-bright": "#31394d",
+        "on-tertiary-fixed-variant": "#4f319c",
+        "tertiary": "#cebdff",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#cebdff",
+        "inverse-surface": "#dae2fd",
+        "surface": "#0b1326",
+        "primary-container": "#8083ff",
+        "secondary": "#d0bcff",
+        "on-secondary-fixed-variant": "#5516be",
+        "error-container": "#93000a",
+        "surface-dim": "#0b1326",
+        "secondary-container": "#571bc1",
+        "tertiary-container": "#9b7fed",
+        "on-tertiary-container": "#31057e",
+        "on-tertiary-fixed": "#21005e",
+        "on-background": "#dae2fd",
+        "inverse-on-surface": "#283044",
+        "surface-container": "#171f33",
+        "on-surface-variant": "#c7c4d7",
+        "on-tertiary": "#381385",
+        "primary": "#c0c1ff",
+        "on-primary-fixed-variant": "#2f2ebe",
+        "on-surface": "#dae2fd",
+        "error": "#ffb4ab",
+        "primary-fixed-dim": "#c0c1ff",
+        "surface-container-low": "#131b2e",
+        "surface-container-lowest": "#060e20",
+        "tertiary-fixed": "#e8ddff",
+        "on-secondary-container": "#c4abff",
+        "on-primary-fixed": "#07006c",
+        "inverse-primary": "#494bd6",
+        "secondary-fixed-dim": "#d0bcff",
+        "on-primary": "#1000a9",
+        "outline": "#908fa0",
+        "background": "#0b1326",
+        "on-primary-container": "#0d0096",
+        "surface-container-highest": "#2d3449",
+        "outline-variant": "#464554",
+        "on-secondary-fixed": "#23005c",
+        "on-error-container": "#ffdad6",
+        "surface-tint": "#c0c1ff",
+        "primary-fixed": "#e1e0ff",
+        "surface-variant": "#2d3449",
+        "surface-container-high": "#222a3d",
+        "secondary-fixed": "#e9ddff",
+        "on-secondary": "#3c0091"
+      },
+      "fonts": [
+        "Inter",
+        "Manrope",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "tabBar": [
+        {
+          "label": "Vazgeç",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "Kaydet",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Ayarlar"
+    },
+    "7201a2589ca54e24af0237b4617e645c": {
+      "screenId": "7201a2589ca54e24af0237b4617e645c",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "w-full",
+            "bg-[#0b1326]/80",
+            "backdrop-blur-xl",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-8"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "min-h-screen",
+            "pt-32",
+            "pb-20",
+            "px-6",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "relative"
+          ],
+          "childCount": 20
+        },
+        {
+          "tag": "footer",
+          "layout": "block",
+          "classes": [
+            "py-12",
+            "px-8",
+            "text-center",
+            "border-t",
+            "border-outline-variant/5"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Tekrar Başlat",
+          "classes": [
+            "w-full",
+            "h-16",
+            "rounded-full",
+            "bg-gradient-to-r",
+            "from-primary",
+            "to-primary-container",
+            "text-on-primary",
+            "font-bold",
+            "text-lg",
+            "shadow-[0_20px_40px_-10px_rgba(128,131,255,0.3)]",
+            "transition-all",
+            "hover:scale-[1.02]",
+            "active:scale-95",
+            "duration-300"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "Ana Sayfaya Dön",
+          "classes": [
+            "w-full",
+            "h-16",
+            "rounded-full",
+            "bg-surface-container-low",
+            "text-on-surface",
+            "font-semibold",
+            "text-lg",
+            "border",
+            "border-outline-variant/15",
+            "transition-all",
+            "hover:bg-surface-container-high",
+            "duration-300"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "settings",
+          "classes": [],
+          "icon": "settings",
+          "action": "click-action",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "settings",
+        "auto_awesome",
+        "schedule",
+        "air"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCw2g73655d_Lo1wujXjhro49KFdnD8g-CXe_yGastXr0gCFbbcJUR5vzU0tHM7N-JFjrE5Rt6b9KF9ob91HOJgoYN6QiA3-730-ov7VUdmoQSYkm3pGoCESQ9TNuDVgmbV95istDdYNXPZJSJv_V",
+          "alt": "Meditation focus"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-bright": "#31394d",
+        "on-tertiary-fixed-variant": "#4f319c",
+        "tertiary": "#cebdff",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#cebdff",
+        "inverse-surface": "#dae2fd",
+        "surface": "#0b1326",
+        "primary-container": "#8083ff",
+        "secondary": "#d0bcff",
+        "on-secondary-fixed-variant": "#5516be",
+        "error-container": "#93000a",
+        "surface-dim": "#0b1326",
+        "secondary-container": "#571bc1",
+        "tertiary-container": "#9b7fed",
+        "on-tertiary-container": "#31057e",
+        "on-tertiary-fixed": "#21005e",
+        "on-background": "#dae2fd",
+        "inverse-on-surface": "#283044",
+        "surface-container": "#171f33",
+        "on-surface-variant": "#c7c4d7",
+        "on-tertiary": "#381385",
+        "primary": "#c0c1ff",
+        "on-primary-fixed-variant": "#2f2ebe",
+        "on-surface": "#dae2fd",
+        "error": "#ffb4ab",
+        "primary-fixed-dim": "#c0c1ff",
+        "surface-container-low": "#131b2e",
+        "surface-container-lowest": "#060e20",
+        "tertiary-fixed": "#e8ddff",
+        "on-secondary-container": "#c4abff",
+        "on-primary-fixed": "#07006c",
+        "inverse-primary": "#494bd6",
+        "secondary-fixed-dim": "#d0bcff",
+        "on-primary": "#1000a9",
+        "outline": "#908fa0",
+        "background": "#0b1326",
+        "on-primary-container": "#0d0096",
+        "surface-container-highest": "#2d3449",
+        "outline-variant": "#464554",
+        "on-secondary-fixed": "#23005c",
+        "on-error-container": "#ffdad6",
+        "surface-tint": "#c0c1ff",
+        "primary-fixed": "#e1e0ff",
+        "surface-variant": "#2d3449",
+        "surface-container-high": "#222a3d",
+        "secondary-fixed": "#e9ddff",
+        "on-secondary": "#3c0091"
+      },
+      "fonts": [
+        "Manrope",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "6"
+      },
+      "tabBar": [],
+      "title": "Seans Tamamlandı"
+    },
+    "75ba9692d33e4038b594ad415ce5ae91": {
+      "screenId": "75ba9692d33e4038b594ad415ce5ae91",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "w-full",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-8",
+            "h-20",
+            "w-full",
+            "z-50"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "lg:flex",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-64",
+            "bg-[#0b1326]",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "lg:ml-64",
+            "pt-24",
+            "pb-12",
+            "px-6",
+            "min-h-screen",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "relative"
+          ],
+          "childCount": 29
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "bg-[#0b1326]/90",
+            "backdrop-blur-xl",
+            "flex",
+            "justify-around",
+            "py-4"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "label": "settings",
+          "classes": [
+            "p-2",
+            "text-indigo-300",
+            "hover:text-indigo-200",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": "settings",
+          "action": "click-action",
+          "expectedRoute": "#"
+        },
+        {
+          "label": "4-4-4 Kutu Nefesi",
+          "classes": [
+            "px-6",
+            "py-3",
+            "rounded-full",
+            "glass-panel",
+            "border",
+            "border-primary/40",
+            "text-primary",
+            "font-medium",
+            "text-sm",
+            "transition-all",
+            "duration-300",
+            "shadow-[0_0_15px_rgba(192,193,255,0.2)]"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "4-7-8 Rahatlatıcı Nefes",
+          "classes": [
+            "px-6",
+            "py-3",
+            "rounded-full",
+            "bg-surface-container-low",
+            "text-on-surface-variant",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "duration-300",
+            "text-sm",
+            "font-medium"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "3",
+          "classes": [
+            "w-12",
+            "h-12",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "bg-surface-container-low",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-all",
+            "text-sm",
+            "font-headline"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "5",
+          "classes": [
+            "w-12",
+            "h-12",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "border",
+            "border-primary/30",
+            "bg-primary/10",
+            "text-primary",
+            "font-bold",
+            "transition-all",
+            "text-sm",
+            "font-headline"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "10",
+          "classes": [
+            "w-12",
+            "h-12",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "bg-surface-container-low",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-all",
+            "text-sm",
+            "font-headline"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "replay\n\nSıfırla",
+          "classes": [
+            "group",
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "replay",
+          "action": "click-action"
+        },
+        {
+          "label": "play_arrow",
+          "classes": [
+            "w-24",
+            "h-24",
+            "rounded-full",
+            "bg-gradient-to-tr",
+            "from-primary",
+            "to-primary-container",
+            "text-on-primary",
+            "flex",
+            "items-center",
+            "justify-center",
+            "shadow-lg",
+            "hover:scale-105",
+            "transition-transform",
+            "duration-300",
+            "group"
+          ],
+          "icon": "play_arrow",
+          "action": "click-action"
+        },
+        {
+          "label": "pause\n\nDuraklat",
+          "classes": [
+            "group",
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "pause",
+          "action": "click-action"
+        },
+        {
+          "label": "air\nExercises",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-indigo-200"
+          ],
+          "icon": "air",
+          "action": "click-action"
+        },
+        {
+          "label": "history\nHistory",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-indigo-400/60"
+          ],
+          "icon": "history",
+          "action": "click-action",
+          "expectedRoute": "#"
+        },
+        {
+          "label": "person\nProfile",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-indigo-400/60"
+          ],
+          "icon": "person",
+          "action": "click-action",
+          "expectedRoute": "#"
+        },
+        {
+          "label": "settings",
+          "classes": [],
+          "icon": "settings",
+          "action": "click-action",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "label": "person",
+          "classes": [],
+          "icon": "person",
+          "action": "click-action",
+          "expectedRoute": "/profile",
+          "routeInferred": true
+        },
+        {
+          "label": "play_arrow",
+          "classes": [],
+          "icon": "play_arrow",
+          "action": "click-action"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "Exercises",
+          "href": "#",
+          "classes": [
+            "text-indigo-200",
+            "font-bold",
+            "font-manrope",
+            "tracking-tight",
+            "hover:text-indigo-200",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": null
+        },
+        {
+          "label": "History",
+          "href": "#",
+          "classes": [
+            "text-indigo-400/60",
+            "font-manrope",
+            "tracking-tight",
+            "hover:text-indigo-200",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": null
+        },
+        {
+          "label": "Profile",
+          "href": "#",
+          "classes": [
+            "text-indigo-400/60",
+            "font-manrope",
+            "tracking-tight",
+            "hover:text-indigo-200",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": null
+        },
+        {
+          "label": "air\nExercises",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "px-4",
+            "py-3",
+            "text-indigo-200",
+            "bg-indigo-500/10",
+            "rounded-r-full",
+            "font-manrope",
+            "font-light",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": "air"
+        },
+        {
+          "label": "history\nHistory",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "px-4",
+            "py-3",
+            "text-indigo-400/40",
+            "hover:bg-white/5",
+            "rounded-r-full",
+            "font-manrope",
+            "font-light",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": "history"
+        },
+        {
+          "label": "person\nProfile",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-4",
+            "px-4",
+            "py-3",
+            "text-indigo-400/40",
+            "hover:bg-white/5",
+            "rounded-r-full",
+            "font-manrope",
+            "font-light",
+            "transition-colors",
+            "duration-300"
+          ],
+          "icon": "person"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "settings",
+        "air",
+        "history",
+        "person",
+        "replay",
+        "play_arrow",
+        "pause",
+        "timer",
+        "psychology"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDrspV2V1kG0WVmkS0bnD_kD36EemcwOngDIlZPwHWE_bWzZe9o_lRWe_nXVj54EWGlxrvtuKMT4Xc1v9YeyDZWTrIFsrcK2Y-OISECj0PTnmIQGXw84PF5U4j-YrCHvA2M7_jySuqprbLFH-n-uH",
+          "alt": "Zen patterns"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "surface-bright": "#31394d",
+        "on-tertiary-fixed-variant": "#4f319c",
+        "tertiary": "#cebdff",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#cebdff",
+        "inverse-surface": "#dae2fd",
+        "surface": "#0b1326",
+        "primary-container": "#8083ff",
+        "secondary": "#d0bcff",
+        "on-secondary-fixed-variant": "#5516be",
+        "error-container": "#93000a",
+        "surface-dim": "#0b1326",
+        "secondary-container": "#571bc1",
+        "tertiary-container": "#9b7fed",
+        "on-tertiary-container": "#31057e",
+        "on-tertiary-fixed": "#21005e",
+        "on-background": "#dae2fd",
+        "inverse-on-surface": "#283044",
+        "surface-container": "#171f33",
+        "on-surface-variant": "#c7c4d7",
+        "on-tertiary": "#381385",
+        "primary": "#c0c1ff",
+        "on-primary-fixed-variant": "#2f2ebe",
+        "on-surface": "#dae2fd",
+        "error": "#ffb4ab",
+        "primary-fixed-dim": "#c0c1ff",
+        "surface-container-low": "#131b2e",
+        "surface-container-lowest": "#060e20",
+        "tertiary-fixed": "#e8ddff",
+        "on-secondary-container": "#c4abff",
+        "on-primary-fixed": "#07006c",
+        "inverse-primary": "#494bd6",
+        "secondary-fixed-dim": "#d0bcff",
+        "on-primary": "#1000a9",
+        "outline": "#908fa0",
+        "background": "#0b1326",
+        "on-primary-container": "#0d0096",
+        "surface-container-highest": "#2d3449",
+        "outline-variant": "#464554",
+        "on-secondary-fixed": "#23005c",
+        "on-error-container": "#ffdad6",
+        "surface-tint": "#c0c1ff",
+        "primary-fixed": "#e1e0ff",
+        "surface-variant": "#2d3449",
+        "surface-container-high": "#222a3d",
+        "secondary-fixed": "#e9ddff",
+        "on-secondary": "#3c0091"
+      },
+      "fonts": [
+        "Manrope",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "8"
+      },
+      "tabBar": [
+        {
+          "label": "Nefes",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "Exercises",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "History",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "Profile",
+          "icon": null,
+          "active": false
+        },
+        {
+          "label": "settings",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "Exercises",
+          "icon": "air",
+          "active": false
+        },
+        {
+          "label": "History",
+          "icon": "history",
+          "active": false
+        },
+        {
+          "label": "Profile",
+          "icon": "person",
+          "active": false
+        },
+        {
+          "label": "Exercises",
+          "icon": "air",
+          "active": false
+        },
+        {
+          "label": "History",
+          "icon": "history",
+          "active": false
+        },
+        {
+          "label": "Profile",
+          "icon": "person",
+          "active": false
+        }
+      ],
+      "title": "Ana Egzersiz Ekranı"
+    }
+  }
+}
